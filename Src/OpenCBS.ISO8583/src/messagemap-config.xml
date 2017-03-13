@@ -1,0 +1,543 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+This is an example of configuration file
+Provided as a part of Free.iso8583 project
+CopyLeft 2009-2015
+-->
+<MessageMap>
+	<message id="req0100" length-header="2">
+        <header name="ISO TPDU" value="6000058053" length="5" />
+        <message-type value="0100" length="2" />
+        <bitmap length="8" />
+        <bit seq="2" type="N" length-header="1" />
+        <bit seq="3" type="N" length="6" />
+        <bit seq="4" type="N" length="12" />
+        <bit seq="11" type="N" length="6" />
+        <bit seq="14" type="N" length="4" delegate="YymmToBytes" />
+        <bit seq="24" type="N" length="3" />
+        <bit seq="22" type="N" length="3" />
+        <bit seq="25" type="N" length="2" />
+        <bit seq="35" type="NS" length-header="1" />
+        <bit seq="42" type="ANS" length="15" />
+        <bit seq="41" type="ANS" length="8" />
+        <bit seq="48" type="ANS" length-header="2" />
+        <bit seq="52" type="B" length="64" />
+        <bit seq="62" type="ANS" length-header="2" />
+        <bit seq="63" type="ANS" length-header="2" />
+        <bit seq="64" type="B" length="64" />
+	</message>
+
+	<model id="mdlRequest0100" class="Free.iso8583.example.model.Request0100" message="req0100">
+		<property name="PrimaryAccountNumber" bit="2" type="string" />
+		<property name="ProcessingCode" bit="3" type="bytes" />
+		<property name="TransactionAmount" bit="4" type="decimal" frac-digits="2" />
+		<property name="SystemAuditTraceNumber" bit="11" type="bytes" />
+		<property name="ExpirationDate" bit="14" delegate="BytesToYymm" />
+		<property name="PosEntryMode" bit="22" type="bytes" />
+		<property name="NetworkInternationalId" bit="24" type="string" />
+		<property name="PosConditionCode" bit="25" type="bytes" />
+		<property name="Track2Data" bit="35" type="bytes" />
+		<property name="TerminalId" bit="41" type="string" />
+		<property name="MerchantId" bit="42" type="string" />
+		<property name="AdditionalData" bit="48" type="string" />
+		<property name="CardholderPinBlock" bit="52" type="bytes" />
+		<property name="InvoiceNumber" bit="62" type="string" />
+		<property name="TransferData" bit="63" bitcontent="bit63" />
+		<property name="MessageAuthenticationCode" bit="64" type="bytes" />
+	</model>
+	<model id="mdlReqBalInq0100" class="Free.iso8583.example.model.ReqBalanceInquiry0100" extend="mdlRequest0100" />
+	<model id="mdlReqPinChg0100" class="Free.iso8583.example.model.ReqPinChange0100" extend="mdlRequest0100" />
+	<model id="mdlReqPayInq0100" class="Free.iso8583.example.model.ReqPaymentInquiry0100" extend="mdlRequest0100" />
+	<model id="mdlReqTrfInq0100" class="Free.iso8583.example.model.ReqTransferInquiry0100" extend="mdlRequest0100" />
+
+	<message id="resp0110" length-header="2">
+		<header name="ISO TPDU" value="6080530005" length="5" />
+		<message-type value="0110" length="2" />
+		<bitmap length="8" />
+		<bit seq="2" type="N" length-header="1" from-request="true" />
+		<bit seq="3" type="N" length="6" from-request="true" />
+		<bit seq="4" type="N" length="12" from-request="true" />
+		<bit seq="11" type="N" length="6" from-request="true" />
+		<bit seq="12" type="N" length="6" delegate="HhmmssToBytes" />
+		<bit seq="13" type="N" length="4" delegate="MmddToBytes" />
+		<bit seq="24" type="N" length="3" from-request="true" />
+		<bit seq="37" type="AN" length="12" />
+		<bit seq="38" type="AN" length="6" />
+		<bit seq="39" type="AN" length="2" />
+		<bit seq="41" type="ANS" length="8" from-request="true" />
+		<bit seq="42" type="ANS" length="15" from-request="true" />
+		<bit seq="48" type="ANS" length-header="2" />
+		<bit seq="54" type="AN" length-header="2" />
+		<bit seq="62" type="ANS" length-header="2" from-request="true" />
+		<bit seq="63" type="ANS" length-header="2" />
+		<bit seq="64" type="B" length="64" />
+	</message>
+
+	<model id="mdlResponse0110" class="Free.iso8583.example.model.Response0110" message="resp0110">
+		<property name="PrimaryAccountNumber" bit="2" type="string" />
+		<property name="ProcessingCode" bit="3" type="bytes" />
+		<property name="TransactionAmount" bit="4" type="decimal" frac-digits="2" />
+		<property name="SystemAuditTraceNumber" bit="11" type="bytes" />
+		<property name="TransactionTime" bit="12" delegate="BytesToHhmmss" />
+		<property name="TransactionDate" bit="13" delegate="BytesToMmdd" />
+		<property name="NetworkInternationalId" bit="24" type="string" />
+		<property name="RetrievalReferenceNumber" bit="37" type="string" />
+		<property name="AuthorizationIdResponse" bit="38" type="string" />
+		<property name="ResponseCode" bit="39" type="string" />
+		<property name="TerminalId" bit="41" type="string" />
+		<property name="MerchantId" bit="42" type="string" />
+		<property name="AdditionalData" bit="48" type="string" />
+		<property name="AdditionalAmount" bit="54" type="decimal" frac-digits="2" />
+		<property name="InvoiceNumber" bit="62" type="string" />
+		<property name="TransferData" bit="63" bitcontent="bit63" />
+		<property name="MessageAuthenticationCode" bit="64" type="bytes" />
+	</model>
+	<model id="mdlRespBalInq0110" class="Free.iso8583.example.model.RespBalanceInquiry0110" extend="mdlResponse0110" />
+	<model id="mdlRespPinChg0110" class="Free.iso8583.example.model.RespPinChange0110" extend="mdlResponse0110" />
+	<model id="mdlRespPayInq0110" class="Free.iso8583.example.model.RespPaymentInquiry0110" extend="mdlResponse0110" />
+	<model id="mdlRespTrfInq0110" class="Free.iso8583.example.model.RespTransferInquiry0110" extend="mdlResponse0110" />
+
+	<message id="req0200" length-header="2">
+		<header name="ISO TPDU" value="6000058053" length="5" />
+		<message-type value="0200" length="2" />
+		<bitmap length="8" />
+		<bit seq="2" type="N" length-header="1" />
+		<bit seq="3" type="N" length="6" />
+		<bit seq="4" type="N" length="12" />
+		<bit seq="11" type="N" length="6" />
+		<bit seq="14" type="N" length="4" delegate="YymmToBytes" />
+		<bit seq="22" type="N" length="3" />
+		<bit seq="24" type="N" length="3" />
+		<bit seq="25" type="N" length="2" />
+		<bit seq="35" type="NS" length-header="1" />
+		<bit seq="41" type="ANS" length="8" />
+		<bit seq="42" type="ANS" length="15" />
+		<bit seq="48" type="ANS" length-header="2" />
+		<bit seq="52" type="B" length="64" />
+		<bit seq="62" type="ANS" length-header="2" />
+		<bit seq="63" type="ANS" length-header="2" />
+		<bit seq="64" type="B" length="64" />
+	</message>
+
+	<model id="mdlRequest0200" class="Free.iso8583.example.model.Request0200" message="req0200">
+		<property name="PrimaryAccountNumber" bit="2" type="string" />
+		<property name="ProcessingCode" bit="3" type="bytes" />
+		<property name="TransactionAmount" bit="4" type="decimal" frac-digits="2" />
+		<property name="SystemAuditTraceNumber" bit="11" type="bytes" />
+		<property name="ExpirationDate" bit="14" delegate="BytesToYymm" />
+		<property name="PosEntryMode" bit="22" type="bytes" />
+		<property name="NetworkInternationalId" bit="24" type="string" />
+		<property name="PosConditionCode" bit="25" type="bytes" />
+		<property name="Track2Data" bit="35" type="bytes" />
+		<property name="TerminalId" bit="41" type="string" />
+		<property name="MerchantId" bit="42" type="string" />
+		<property name="AdditionalData" bit="48" tlv="tlvReqDe48" />
+		<property name="CardholderPinBlock" bit="52" type="bytes" />
+		<property name="InvoiceNumber" bit="62" type="string" />
+		<property name="TransferData" bit="63" bitcontent="bit63" />
+		<property name="MessageAuthenticationCode" bit="64" type="bytes" />
+	</model>
+	<model id="mdlReqCasWit0200" class="Free.iso8583.example.model.ReqCashWithdrawal0200" extend="mdlRequest0200" />
+	<model id="mdlReqPay0200" class="Free.iso8583.example.model.ReqPayment0200" extend="mdlRequest0200" />
+	<model id="mdlReqTrf0200" class="Free.iso8583.example.model.ReqTransfer0200" extend="mdlRequest0200" />
+
+  <message id="resp0210" length-header="2">
+		<header name="ISO TPDU" value="6080530005" length="5" />
+		<message-type value="0210" length="2" />
+		<bitmap length="8" />
+		<bit seq="2" type="N" length-header="1" from-request="true" />
+		<bit seq="3" type="N" length="6" from-request="true" />
+		<bit seq="4" type="N" length="12" from-request="true" />
+		<bit seq="11" type="N" length="6" from-request="true" />
+		<bit seq="12" type="N" length="6" delegate="HhmmssToBytes" />
+		<bit seq="13" type="N" length="4" delegate="MmddToBytes" />
+		<bit seq="24" type="N" length="3" from-request="true" />
+		<bit seq="37" type="AN" length="12" />
+		<bit seq="38" type="AN" length="6" />
+		<bit seq="39" type="AN" length="2" />
+		<bit seq="41" type="ANS" length="8" from-request="true" />
+		<bit seq="42" type="ANS" length="15" from-request="true" />
+		<bit seq="48" type="ANS" length-header="2" />
+		<bit seq="62" type="ANS" length-header="2" from-request="true" />
+		<bit seq="63" type="ANS" length-header="2" />
+		<bit seq="64" type="B" length="64" />
+	</message>
+
+	<model id="mdlResponse0210" class="Free.iso8583.example.model.Response0210" message="resp0210">
+		<property name="PrimaryAccountNumber" bit="2" type="string" />
+		<property name="ProcessingCode" bit="3" type="bytes" />
+		<property name="TransactionAmount" bit="4" type="decimal" frac-digits="2" />
+		<property name="SystemAuditTraceNumber" bit="11" type="bytes" />
+		<property name="TransactionTime" bit="12" delegate="BytesToHhmmss" />
+		<property name="TransactionDate" bit="13" delegate="BytesToMmdd" />
+		<property name="NetworkInternationalId" bit="24" type="string" />
+		<property name="RetrievalReferenceNumber" bit="37" type="string" />
+		<property name="AuthorizationIdResponse" bit="38" type="string" />
+		<property name="ResponseCode" bit="39" type="string" />
+		<property name="TerminalId" bit="41" type="string" />
+		<property name="MerchantId" bit="42" type="string" />
+		<property name="AdditionalData" bit="48" tlv="tlvRespDe48" />
+		<property name="InvoiceNumber" bit="62" type="string" />
+		<property name="TransferData" bit="63" bitcontent="bit63" />
+		<property name="MessageAuthenticationCode" bit="64" type="bytes" />
+	</model>
+	<model id="mdlRespCasWit0210" class="Free.iso8583.example.model.RespCashWithdrawal0210" extend="mdlResponse0210" />
+	<model id="mdlRespPay0210" class="Free.iso8583.example.model.RespPayment0210" extend="mdlResponse0210" />
+	<model id="mdlRespTrf0210" class="Free.iso8583.example.model.RespTransfer0210" extend="mdlResponse0210" />
+
+  <message id="req0200SB" length-header="2">
+    <header name="ISO TPDU" value="6000058053" length="5" />
+    <message-type value="0200" length="2" />
+    <bitmap length="16" />
+    <bit seq="1" type="NULL" />
+    <bit seq="2" type="N" length-header="1" />
+    <bit seq="3" type="N" length="6" />
+    <bit seq="4" type="N" length="12" />
+    <bit seq="11" type="N" length="6" />
+    <bit seq="14" type="N" length="4" delegate="YymmToBytes" />
+    <bit seq="22" type="N" length="3" />
+    <bit seq="24" type="N" length="3" />
+    <bit seq="25" type="N" length="2" />
+    <bit seq="35" type="NS" length-header="1" />
+    <bit seq="41" type="ANS" length="8" />
+    <bit seq="42" type="ANS" length="15" />
+    <bit seq="48" type="ANS" length-header="2" />
+    <bit seq="52" type="B" length="64" />
+    <bit seq="62" type="ANS" length-header="2" />
+    <bit seq="63" type="ANS" length-header="2" />
+    <bit seq="64" type="B" length="64" />
+    <bit seq="104" type="ANS" length-header="2" />
+  </message>
+
+  <model id="mdlRequest0200SB" class="Free.iso8583.example.model.Request0200SB" message="req0200SB">
+    <!-- We don't need this mapping: <property name="SecondBitMap" bit="1" type="bytes" /> -->
+    <property name="PrimaryAccountNumber" bit="2" type="string" />
+    <property name="ProcessingCode" bit="3" type="bytes" />
+    <property name="TransactionAmount" bit="4" type="decimal" frac-digits="2" />
+    <property name="SystemAuditTraceNumber" bit="11" type="bytes" />
+    <property name="ExpirationDate" bit="14" delegate="BytesToYymm" />
+    <property name="PosEntryMode" bit="22" type="bytes" />
+    <property name="NetworkInternationalId" bit="24" type="string" />
+    <property name="PosConditionCode" bit="25" type="bytes" />
+    <property name="Track2Data" bit="35" type="bytes" />
+    <property name="TerminalId" bit="41" type="string" />
+    <property name="MerchantId" bit="42" type="string" />
+    <property name="AdditionalData" bit="48" tlv="tlvReqDe48" />
+    <property name="CardholderPinBlock" bit="52" type="bytes" />
+    <property name="InvoiceNumber" bit="62" type="string" />
+    <property name="TransferData" bit="63" bitcontent="bit63" />
+    <property name="MessageAuthenticationCode" bit="64" type="bytes" />
+    <property name="TransactionDescription" bit="104" type="string" />
+  </model>
+
+  <message id="resp0210SB" length-header="2">
+    <header name="ISO TPDU" value="6080530005" length="5" />
+    <message-type value="0210" length="2" />
+    <bitmap length="16" />
+    <bit seq="1" type="NULL" />
+    <bit seq="2" type="N" length-header="1" from-request="true" />
+    <bit seq="3" type="N" length="6" from-request="true" />
+    <bit seq="4" type="N" length="12" from-request="true" />
+    <bit seq="11" type="N" length="6" from-request="true" />
+    <bit seq="12" type="N" length="6" delegate="HhmmssToBytes" />
+    <bit seq="13" type="N" length="4" delegate="MmddToBytes" />
+    <bit seq="24" type="N" length="3" from-request="true" />
+    <bit seq="37" type="AN" length="12" />
+    <bit seq="38" type="AN" length="6" />
+    <bit seq="39" type="AN" length="2" />
+    <bit seq="41" type="ANS" length="8" from-request="true" />
+    <bit seq="42" type="ANS" length="15" from-request="true" />
+    <bit seq="48" type="ANS" length-header="2" />
+    <bit seq="62" type="ANS" length-header="2" from-request="true" />
+    <bit seq="63" type="ANS" length-header="2" />
+    <bit seq="64" type="B" length="64" />
+    <bit seq="104" type="ANS" length-header="2" from-request="true" />
+  </message>
+
+  <model id="mdlResponse0210SB" class="Free.iso8583.example.model.Response0210SB" message="resp0210SB">
+    <!-- We don't need this mapping: <property name="SecondBitMap" bit="1" type="bytes" /> -->
+    <property name="PrimaryAccountNumber" bit="2" type="string" />
+    <property name="ProcessingCode" bit="3" type="bytes" />
+    <property name="TransactionAmount" bit="4" type="decimal" frac-digits="2" />
+    <property name="SystemAuditTraceNumber" bit="11" type="bytes" />
+    <property name="TransactionTime" bit="12" delegate="BytesToHhmmss" />
+    <property name="TransactionDate" bit="13" delegate="BytesToMmdd" />
+    <property name="NetworkInternationalId" bit="24" type="string" />
+    <property name="RetrievalReferenceNumber" bit="37" type="string" />
+    <property name="AuthorizationIdResponse" bit="38" type="string" />
+    <property name="ResponseCode" bit="39" type="string" />
+    <property name="TerminalId" bit="41" type="string" />
+    <property name="MerchantId" bit="42" type="string" />
+    <property name="AdditionalData" bit="48" tlv="tlvRespDe48" />
+    <property name="InvoiceNumber" bit="62" type="string" />
+    <property name="TransferData" bit="63" bitcontent="bit63" />
+    <property name="MessageAuthenticationCode" bit="64" type="bytes" />
+    <property name="TransactionDescription" bit="104" type="string" />
+  </model>
+
+    <message id="req0200TB" length-header="2">
+        <header name="ISO TPDU" value="6000058053" length="5" />
+        <message-type value="0200" length="2" />
+        <bitmap length="8" />
+        <bit seq="1" type="BitMap" length="8" />
+        <bit seq="2" type="N" length-header="1" />
+        <bit seq="3" type="N" length="6" />
+        <bit seq="4" type="N" length="12" />
+        <bit seq="11" type="N" length="6" />
+        <bit seq="14" type="N" length="4" delegate="YymmToBytes" />
+        <bit seq="22" type="N" length="3" />
+        <bit seq="24" type="N" length="3" />
+        <bit seq="25" type="N" length="2" />
+        <bit seq="35" type="NS" length-header="1" />
+        <bit seq="41" type="ANS" length="8" />
+        <bit seq="42" type="ANS" length="15" />
+        <bit seq="48" type="ANS" length-header="2" />
+        <bit seq="52" type="B" length="64" />
+        <bit seq="62" type="ANS" length-header="2" />
+        <bit seq="63" type="ANS" length-header="2" />
+        <bit seq="64" type="B" length="64" />
+        <bit seq="65" type="BitMap" length="8" />
+        <bit seq="104" type="ANS" length-header="2" />
+        <bit seq="129" type="ANS" length-header="1" />
+        <bit seq="192" type="AN" length="5" />
+    </message>
+
+    <model id="mdlRequest0200TB" class="Free.iso8583.example.model.Request0200TB" message="req0200TB">
+        <property name="PrimaryAccountNumber" bit="2" type="string" />
+        <property name="ProcessingCode" bit="3" type="bytes" />
+        <property name="TransactionAmount" bit="4" type="decimal" frac-digits="2" />
+        <property name="SystemAuditTraceNumber" bit="11" type="bytes" />
+        <property name="ExpirationDate" bit="14" delegate="BytesToYymm" />
+        <property name="PosEntryMode" bit="22" type="bytes" />
+        <property name="NetworkInternationalId" bit="24" type="string" />
+        <property name="PosConditionCode" bit="25" type="bytes" />
+        <property name="Track2Data" bit="35" type="bytes" />
+        <property name="TerminalId" bit="41" type="string" />
+        <property name="MerchantId" bit="42" type="string" />
+        <property name="AdditionalData" bit="48" tlv="tlvReqDe48" />
+        <property name="CardholderPinBlock" bit="52" type="bytes" />
+        <property name="InvoiceNumber" bit="62" type="string" />
+        <property name="TransferData" bit="63" bitcontent="bit63" />
+        <property name="MessageAuthenticationCode" bit="64" type="bytes" />
+        <property name="TransactionDescription" bit="104" type="string" />
+        <property name="AdditionalField1" bit="129" type="string" />
+        <property name="AdditionalField2" bit="192" type="int" />
+    </model>
+
+    <message id="resp0210TB" length-header="2">
+        <header name="ISO TPDU" value="6080530005" length="5" />
+        <message-type value="0210" length="2" />
+        <bitmap length="16" />
+        <bit seq="1" type="NULL" />
+        <bit seq="2" type="N" length-header="1" from-request="true" />
+        <bit seq="3" type="N" length="6" from-request="true" />
+        <bit seq="4" type="N" length="12" from-request="true" />
+        <bit seq="11" type="N" length="6" from-request="true" />
+        <bit seq="12" type="N" length="6" delegate="HhmmssToBytes" />
+        <bit seq="13" type="N" length="4" delegate="MmddToBytes" />
+        <bit seq="24" type="N" length="3" from-request="true" />
+        <bit seq="37" type="AN" length="12" />
+        <bit seq="38" type="AN" length="6" />
+        <bit seq="39" type="AN" length="2" />
+        <bit seq="41" type="ANS" length="8" from-request="true" />
+        <bit seq="42" type="ANS" length="15" from-request="true" />
+        <bit seq="48" type="ANS" length-header="2" />
+        <bit seq="62" type="ANS" length-header="2" from-request="true" />
+        <bit seq="63" type="ANS" length-header="2" />
+        <bit seq="64" type="B" length="64" />
+        <bit seq="104" type="ANS" length-header="2" from-request="true" />
+        <bit seq="65" type="BitMap" length="8" />
+        <bit seq="192" type="AN" length="5" from-request="true" />
+        <bit seq="129" type="ANS" length-header="1" from-request="true" />
+    </message>
+
+    <model id="mdlResponse0210TB" class="Free.iso8583.example.model.Response0210TB" message="resp0210TB">
+        <!-- We don't need this mapping: <property name="SecondBitMap" bit="1" type="bytes" /> -->
+        <property name="PrimaryAccountNumber" bit="2" type="string" />
+        <property name="ProcessingCode" bit="3" type="bytes" />
+        <property name="TransactionAmount" bit="4" type="decimal" frac-digits="2" />
+        <property name="SystemAuditTraceNumber" bit="11" type="bytes" />
+        <property name="TransactionTime" bit="12" delegate="BytesToHhmmss" />
+        <property name="TransactionDate" bit="13" delegate="BytesToMmdd" />
+        <property name="NetworkInternationalId" bit="24" type="string" />
+        <property name="RetrievalReferenceNumber" bit="37" type="string" />
+        <property name="AuthorizationIdResponse" bit="38" type="string" />
+        <property name="ResponseCode" bit="39" type="string" />
+        <property name="TerminalId" bit="41" type="string" />
+        <property name="MerchantId" bit="42" type="string" />
+        <property name="AdditionalData" bit="48" tlv="tlvRespDe48" />
+        <property name="InvoiceNumber" bit="62" type="string" />
+        <property name="TransferData" bit="63" bitcontent="bit63" />
+        <property name="MessageAuthenticationCode" bit="64" type="bytes" />
+        <property name="TransactionDescription" bit="104" type="string" />
+        <property name="AdditionalField1" bit="129" type="string" />
+        <property name="AdditionalField2" bit="192" type="int" />
+    </model>
+
+    <message id="req0800" length-header="2">
+		<header name="ISO TPDU" value="6000058053" length="5" />
+		<message-type value="0800" length="2" />
+		<bitmap length="8" />
+		<bit seq="3" type="N" length="6" />
+		<bit seq="11" type="N" length="6" />
+		<bit seq="24" type="N" length="3" />
+		<bit seq="41" type="ANS" length="8" />
+	</message>
+
+	<model id="mdlRequest0800" class="Free.iso8583.example.model.Request0800" message="req0800">
+		<property name="ProcessingCode" bit="3" type="bytes" />
+		<property name="SystemAuditTraceNumber" bit="11" type="bytes" />
+		<property name="NetworkInternationalId" bit="24" type="string" />
+		<property name="TerminalId" bit="41" type="string" />
+	</model>
+	<model id="mdlReqLogon0800" class="Free.iso8583.example.model.ReqLogon0800" extend="mdlRequest0800" />
+
+	<message id="resp0810" length-header="2">
+		<header name="ISO TPDU" value="6080530005" length="5" />
+		<message-type value="0810" length="2" />
+		<bitmap length="8" />
+		<bit seq="3" type="N" length="6" from-request="true" />
+		<bit seq="11" type="N" length="6" from-request="true" />
+		<bit seq="24" type="N" length="3" from-request="true" />
+		<bit seq="39" type="AN" length="2" />
+		<bit seq="41" type="ANS" length="8" from-request="true" />
+		<bit seq="62" type="ANS" length-header="2" />
+	</message>
+
+	<model id="mdlResponse0810" class="Free.iso8583.example.model.Response0810" message="resp0810">
+		<property name="ProcessingCode" bit="3" type="bytes" />
+		<property name="SystemAuditTraceNumber" bit="11" type="bytes" />
+		<property name="NetworkInternationalId" bit="24" type="string" />
+		<property name="ResponseCode" bit="39" type="string" />
+		<property name="TerminalId" bit="41" type="string" />
+		<property name="PrivateUse" bit="62" type="bytes" />
+	</model>
+	<model id="mdlRespLogon0810" class="Free.iso8583.example.model.RespLogon0810" extend="mdlResponse0810" />
+
+	<message-to-model model="mdlRequest0100" delegate="req0100Process">
+		<and>
+			<!--mask start-byte="3" length="5" value="6000058053" /--><!-- ISO TPDU -->
+			<mask start-byte="8" length="2" value="0100" /><!-- Message Type -->
+		</and>
+	</message-to-model>
+	<message-to-model model="mdlRespTrfInq0110">
+		<and>
+			<!--mask start-byte="3" length="5" value="6080530005" /--><!-- ISO TPDU -->
+			<mask start-byte="8" length="2" value="0110" /><!-- Message Type -->
+		</and>
+	</message-to-model>
+
+    <message-to-model model="mdlRequest0200TB" delegate="req0200ProcessSB">
+        <and>
+            <mask start-byte="8" length="2" value="0200" />
+            <mask start-byte="10" length="1" mask="80" result="notZero" />
+            <mask start-byte="18" length="1" mask="80" result="notZero" />
+        </and>
+    </message-to-model>
+    <message-to-model model="mdlResponse0210TB">
+        <and>
+            <mask start-byte="8" length="2" value="0210" />
+            <mask start-byte="10" length="1" mask="80" result="notZero" />
+            <mask start-byte="18" length="1" mask="80" result="notZero" />
+        </and>
+    </message-to-model>
+
+    <message-to-model model="mdlRequest0200SB" delegate="req0200ProcessSB">
+        <and>
+            <mask start-byte="8" length="2" value="0200" />
+            <mask start-byte="10" length="1" mask="80" result="notZero" />
+            <!--mask start-byte="18" length="1" mask="80" result="zero" /-->
+        </and>
+    </message-to-model>
+    <message-to-model model="mdlResponse0210SB">
+        <and>
+            <mask start-byte="8" length="2" value="0210" />
+            <mask start-byte="10" length="1" mask="80" result="notZero" />
+            <!--mask start-byte="18" length="1" mask="80" result="zero" /-->
+        </and>
+    </message-to-model>
+
+  <message-to-model model="mdlRequest0200" delegate="req0200Process">
+    <and>
+      <mask start-byte="8" length="2" value="0200" />
+      <mask start-byte="10" length="1" mask="80" result="zero" />
+    </and>
+  </message-to-model>
+  <message-to-model model="mdlRespTrf0210">
+    <and>
+      <mask start-byte="8" length="2" value="0210" />
+      <mask start-byte="10" length="1" mask="80" result="zero" />
+    </and>
+  </message-to-model>
+
+  <message-to-model model="mdlRequest0800" delegate="req0800Process">
+    <mask start-byte="8" length="2" value="0800" />
+  </message-to-model>
+  <message-to-model model="mdlRespLogon0810">
+    <mask start-byte="8" length="2" value="0810" />
+  </message-to-model>
+	
+	<!--hpdh-edc-transaction-type value="" model="" delegate="" /-->
+
+	<BitContent id="bit63" class="Free.iso8583.example.model.Bit63Content">
+		<field name="TableId" length="2" pad="0" align="right" />
+		<field name="BeneficiaryInstitutionId" length="11" pad="0" align="right" null=" " />
+		<field name="BeneficiaryAccountNumber" length="28" pad=" " align="left" null=" " trim="true" />
+		<field name="BeneficiaryName" length="30" pad=" " align="left" null=" " trim="true" />
+		<field name="CustomerReferenceNumber" length="16" pad=" " align="left" null=" " trim="true" />
+		<field name="IssuerInstitutionId" length="11" pad="0" align="right" null=" " />
+		<field name="CardholderAccountNumber" length="28" pad=" " align="left" null=" " trim="true" />
+		<field name="CardholderName" length="30" pad=" " align="left" null=" " trim="true" />
+		<field name="InformationData" length="100" pad=" " align="left" null=" " trim="true" optional="true" />
+	</BitContent>
+
+	<delegate id="BytesToMmdd" class="Free.iso8583.model.DateTimeNibble" method="GetMMDD" param-type="System.Byte[]" />
+	<delegate id="MmddToBytes" class="Free.iso8583.model.DateTimeNibble" method="GetBytesFromMMDD" param-type="System.DateTime" />
+	<delegate id="BytesToYymm" class="Free.iso8583.model.DateTimeNibble" method="GetYYMM" param-type="System.Byte[]" />
+	<delegate id="YymmToBytes" class="Free.iso8583.model.DateTimeNibble" method="GetBytesFromYYMM" param-type="System.DateTime" />
+	<delegate id="BytesToHhmmss" class="Free.iso8583.model.DateTimeNibble" method="GetHHMMSS" param-type="System.Byte[]" />
+	<delegate id="HhmmssToBytes" class="Free.iso8583.model.DateTimeNibble" method="GetBytesFromHHMMSS" param-type="System.DateTime" />
+
+	<delegate id="req0100Process" class="Free.iso8583.example.process.Message0100Process" method="Execute"
+		param-type="Free.iso8583.example.model.Request0100" />
+	<delegate id="req0200Process" class="Free.iso8583.example.process.Message0200Process" method="Execute"
+		param-type="Free.iso8583.example.model.Request0200" />
+	<delegate id="req0200ProcessSB" class="Free.iso8583.example.process.Message0200ProcessSB" method="Execute"
+		param-type="Free.iso8583.example.model.Request0200SB" />
+	<delegate id="req0400Process" class="Free.iso8583.example.process.Message0400Process" method="Execute"
+		param-type="Free.iso8583.example.model.Request0400" />
+	<delegate id="req0800Process" class="Free.iso8583.example.process.Message0800Process" method="Execute"
+		param-type="Free.iso8583.example.model.Request0800" />
+
+	<BitContent id="bit48" class="Free.iso8583.example.model.RequestDataEntry48">
+		<field name="ProductCode" length="5" pad="0" align="right" />
+		<field name="Note" length="50" pad=" " align="left" null=" " trim="true" />
+		<field name="Fee" tlv-tag-name="FD" tlv-length-bytes="1" />
+	</BitContent>
+	
+	<tlv id="tlvReqDe48" length-bytes="3">
+		<tag name="TD" type="bitcontent" bitcontent="bit48" />
+	</tlv>
+
+	<tlv id="tlvRespDe48" length-bytes="3" class="Free.iso8583.example.model.ResponseDataEntry48">
+		<tag name="ID" />
+		<tag name="IP" type="array" splitter=";" />
+	</tlv>
+  
+	<!--
+	This commented configuration is the example if you use the model class coming from AnotherLibrary
+	which is compiled in different binary file (dll, exe etc.)
+  
+	<BitContent id="bit48" class="AnotherLibrary.model.RequestDataEntry48, AnotherLibrary">
+		<field name="FormatVersion" length="1" />
+		<field name="ProductCode" length="4" trim="true" />
+		<field name="UserId" length="24" pad=" " align="left" null=" " trim="true" />
+		<field name="Nominal" tlv-tag-name="VD" tlv-length-bytes="2" />
+	</BitContent>
+
+	<tlv id="tlvRespDe48" length-bytes="3" class="AnotherLibrary.model.ResponseDataEntry48, AnotherLibrary">
+		<tag name="ID" />
+		<tag name="IP" type="array" splitter=";" />
+	</tlv>
+	-->
+</MessageMap>

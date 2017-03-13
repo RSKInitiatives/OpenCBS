@@ -1,0 +1,263 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using OpenCBS.Messaging.Custom;
+using System.ComponentModel.Composition;
+using OpenCBS.Messaging.Interfaces;
+using OpenCBS.CoreDomain;
+using OpenCBS.Messaging.Events;
+using OpenCBS.Services;
+using OpenCBS.Services.Messaging;
+using OpenCBS.CoreDomain.Messaging;
+using OpenCBS.CoreDomain.Clients;
+using OpenCBS.Enums;
+using OpenCBS.CoreDomain.Contracts.Savings;
+using OpenCBS.CoreDomain.Events.Saving;
+using OpenCBS.CoreDomain.Contracts.Loans;
+
+namespace OpenCBS.Messaging.Messages
+{
+    public partial class MessagingService : IMessagingService
+    {
+        private Person person;
+
+        #region Fields
+
+        [Import]
+        public MessageTemplateServices _messageTemplateService { get; set; }
+        [Import]
+        public QueuedEmailServices _queuedEmailService { get; set; }
+        [Import]
+        public QueuedSMSServices _queuedSMSService { get; set; }
+        [Import]
+        public ITokenizer Tokenizer { get; set; }
+        [Import]
+        public EmailAccountServices _emailAccountService { get; set; }
+        [Import]
+        public IMessageTokenProvider MessageTokenProvider { get; set; }
+
+        [Import]
+        public EmailAccountSettings EmailAccountSettings { get; set; }
+        [Import]
+        public IEventPublisher EventPublisher { get; set; }
+
+        public AccountServices SavingsService { get; set; }
+
+        #endregion
+
+        #region Ctor
+
+        public MessagingService()
+        {
+            InitializeServices();
+        }        
+
+        public MessagingService(Person Person)
+        {
+            this.person = Person;
+            InitializeServices();
+        }
+
+        private void InitializeServices()
+        {
+            _messageTemplateService = ServicesProvider.GetInstance().GetMessageTemplateServices();
+            _emailAccountService = ServicesProvider.GetInstance().GetEmailAccountServices();
+            _queuedEmailService = ServicesProvider.GetInstance().GetQueuedEmailServices();
+            _queuedSMSService = ServicesProvider.GetInstance().GetQueuedSMSServices();
+
+            SavingsService = ServicesProvider.GetInstance().GetAccountServices();
+
+            EventPublisher = new NullEventPublisher();
+            EmailAccountSettings = new EmailAccountSettings();
+            MessageTokenProvider = new MessageTokenProvider();
+            Tokenizer = new Tokenizer(new MessageTemplatesSettings());
+        }
+
+        #endregion
+
+        #region Utilities
+
+        protected int SendNotification(MessageTemplate messageTemplate, EmailAccount emailAccount,
+            IEnumerable<Token> tokens,
+            string toEmailAddress,
+            string toName,
+            string replyTo = null,
+            string replyToName = null, ISavingsContract savingsContract = null)
+        {
+            #region Email routine
+            if (person.EmailDelivery.HasValue && person.EmailDelivery.Value 
+                && messageTemplate.SendEmail.HasValue && messageTemplate.SendEmail.Value)
+            {
+                var bcc = messageTemplate.BccEmailAddresses;
+                var subject = messageTemplate.Subject;
+                var body = messageTemplate.EmailBody;
+
+                // Replace subject and body tokens 
+                var subjectReplaced = Tokenizer.Replace(subject, tokens, false);
+                var bodyReplaced = Tokenizer.Replace(body, tokens, true);
+
+                var email = new QueuedEmail()
+                {
+                    Priority = 5,
+                    From = emailAccount.Email,
+                    FromName = emailAccount.DisplayName,
+                    To = toEmailAddress,
+                    ToName = toName,
+                    CC = string.Empty,
+                    SentTries = 0,
+                    Bcc = bcc,
+                    ReplyTo = replyTo,
+                    ReplyToName = replyToName,
+                    Subject = subjectReplaced,
+                    Body = bodyReplaced,
+                    CreatedOnUtc = DateTime.UtcNow,
+                    EmailAccountId = emailAccount.Id
+                };
+
+                _queuedEmailService.Add(email);
+                //return email.Id;
+            }
+            #endregion
+
+            #region SMS routine
+            if (person.SMSDelivery.HasValue && person.SMSDelivery.Value
+                && messageTemplate.SendSMS.HasValue && messageTemplate.SendSMS.Value)
+            {
+                var message = messageTemplate.Body;
+                var messageReplaced = Tokenizer.Replace(message, tokens, false);
+
+                var sms = new QueuedSMS()
+                {
+                    From = Convert.ToString(ServicesProvider.GetInstance().GetGeneralSettings().GetSpecificParameter(OGeneralSettings.SMS_FROM_NUMBER)),
+                    Recipient = person.PersonalPhone,
+                    RecipientId = person.Id,
+                    ContractId = savingsContract != null ? savingsContract.Id : 0,
+                    Charged = false,
+                    Message = messageReplaced,
+                    SentTries = 0,
+                    CreatedOnUtc = DateTime.UtcNow,                    
+                };
+
+                _queuedSMSService.Add(sms);
+                //return sms.Id;
+            }
+            #endregion
+            return 0;
+        }
+
+        protected MessageTemplate GetLocalizedActiveMessageTemplate(string messageTemplateName)
+        {
+            var messageTemplate = _messageTemplateService.FindByName(messageTemplateName);
+
+            //no template found
+            if (messageTemplate == null)
+                return null;
+
+            //ensure it's active
+            var isActive = messageTemplate.IsActive;
+            if (!isActive)
+                return null;
+
+            return messageTemplate;
+        }
+
+        protected EmailAccount GetEmailAccountOfMessageTemplate(MessageTemplate messageTemplate)
+        {
+            var emailAccounId = messageTemplate.EmailAccountId;
+            var emailAccount = _emailAccountService.FindById(emailAccounId);
+            if (emailAccount == null)
+                emailAccount = _emailAccountService.FindById(EmailAccountSettings.DefaultEmailAccountId);
+            if (emailAccount == null)
+                emailAccount = _emailAccountService.LoadAll().FirstOrDefault();
+
+            return emailAccount;
+        }
+
+        private Tuple<string, string> GetReplyToEmail(Person person)
+        {
+            if (person == null || person.Email.IsEmpty())
+                return new Tuple<string, string>(null, null);
+
+            string email = person.Email;
+            string name = GetDisplayNameForClient(person);
+
+            return new Tuple<string, string>(email, name);
+        }
+
+        private string GetDisplayNameForClient(Person person)
+        {
+            if (person == null)
+                return string.Empty;
+
+            return person.FullName.EmptyNull();
+        }
+
+        #endregion
+
+        #region Methods
+
+        #region Client notification                
+
+        public int SendNotification(SavingEvent savingEvent, ISavingsContract savingsContract, string savingsOperation)
+        {
+            if (person == null)
+                throw new ArgumentNullException("client");
+
+            var messageTemplate = GetLocalizedActiveMessageTemplate("Client.AccountOperationNotification");
+            if (messageTemplate == null)
+                return 0;
+
+            //tokens
+            var tokens = new List<Token>();
+            MessageTokenProvider.AddPersonTokens(tokens, person);
+            MessageTokenProvider.AddSavingEventTokens(tokens, savingEvent, savingsContract);
+
+
+            
+            //Add messaging operation code
+            tokens.Add(new Token("Messaging.OperationCode", savingsOperation));
+            
+            tokens.Add(new Token("Messaging.CurrentDate", DateTime.Now.ToShortDateString()));
+            tokens.Add(new Token("Messaging.CurrentTime", DateTime.Now.ToShortTimeString()));
+
+            //event notification
+            EventPublisher.MessageTokensAdded(messageTemplate, tokens);
+
+            var emailAccount = GetEmailAccountOfMessageTemplate(messageTemplate);
+            var toEmail = person.Email;
+            var toName = person.FullName;
+            return SendNotification(messageTemplate, emailAccount, tokens,
+                toEmail, toName, null, null, savingsContract);
+        }
+
+        public int SendNotification(SavingEvent savingEvent, OPaymentMethods paymentMethod)
+        {
+            if (person == null)
+                throw new ArgumentNullException("client");
+
+            var messageTemplate = GetLocalizedActiveMessageTemplate("Client.LoanDisbursementNotification");
+            if (messageTemplate == null)
+                return 0;
+
+            SavingBookContract savingsContract = SavingsService.GetSaving(savingEvent.ContracId);
+            //tokens
+            var tokens = new List<Token>();
+            MessageTokenProvider.AddPersonTokens(tokens, person);
+            MessageTokenProvider.AddSavingEventTokens(tokens, savingEvent, savingsContract);
+
+            tokens.Add(new Token("Messaging.CurrentDate", DateTime.Now.ToShortDateString()));
+            tokens.Add(new Token("Messaging.CurrentTime", DateTime.Now.ToShortTimeString()));
+
+            //event notification
+            EventPublisher.MessageTokensAdded(messageTemplate, tokens);
+
+            var emailAccount = GetEmailAccountOfMessageTemplate(messageTemplate);
+            var toEmail = person.Email;
+            var toName = person.FullName;
+            return SendNotification(messageTemplate, emailAccount, tokens, toEmail, toName);
+        }
+        #endregion
+
+        #endregion                       
+    }
+}

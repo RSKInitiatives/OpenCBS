@@ -1,0 +1,198 @@
+﻿@using Free.iso8583.example.model
+@using Iso8583WebClient;
+    <table id="panel" class="fields">
+    <tr id="trPrimaryAccountNumber">
+        <td>PrimaryAccountNumber</td>
+        <td>
+            <input type="text" name="PrimaryAccountNumber" maxlength="16" size="18"
+                value="@Free.iso8583.MessageUtility.HexToString(Model.PrimaryAccountNumber)"
+                onkeypress="numeric_KeyPress(this, arguments[0])" />
+            <input type="checkbox" name="chkPrimaryAccountNumber" value="NULL" /> NULL
+        </td>
+    </tr>
+    <tr id="trProcessingCode">
+        <td>ProcessingCode</td>
+        <td>
+            <input type="text" name="ProcessingCode.TransactionTypeCodeString" maxlength="2" size="3" readonly="readonly"
+                value="@Model.ProcessingCode.TransactionTypeCodeString" />
+            @Html.DropDownList("ProcessingCode.FromAccountCodeString", (String)Model.ProcessingCode.FromAccountCodeString,
+                (IEnumerable<SelectListItem>)ViewBag.AccountCodeList)
+            @Html.DropDownList("ProcessingCode.ToAccountCodeString", (String)Model.ProcessingCode.ToAccountCodeString,
+                (IEnumerable<SelectListItem>)ViewBag.AccountCodeList)
+        </td>
+    </tr>
+    <tr id="trTransactionAmount">
+        <td>TransactionAmount</td>
+        <td>
+            <input type="text" name="TransactionAmount" maxlength="12" size="14" value="@Model.TransactionAmount"
+                onkeypress="decimal_KeyPress(this, arguments[0])" />
+        </td>
+    </tr>
+    <tr id="trSystemAuditTraceNumber">
+        <td>SystemAuditTraceNumber</td>
+        <td>
+            <input type="text" name="SystemAuditTraceNumber" maxlength="12" size="14"
+                value="@Free.iso8583.MessageUtility.HexToString(Model.SystemAuditTraceNumber)"
+                onkeypress="numeric_KeyPress(this, arguments[0])" />
+        </td>
+    </tr>
+    <tr id="trExpirationDate">
+        <td>ExpirationDate</td>
+        <td>
+            <input type="text" name="ExpirationDate" maxlength="5" size="6" />yy/mm&nbsp;
+            <input type="checkbox" name="chkExpirationDate" value="NULL" /> NULL
+        </td>
+    </tr>
+    <tr id="trPosEntryMode">
+        <td>PosEntryMode</td>
+        <td>
+            @Html.DropDownList("PosEntryMode.MediaCodeString", (String)Model.PosEntryMode.MediaCodeString,
+                (IEnumerable<SelectListItem>)ViewBag.PosEntryMediaList)
+            @Html.DropDownList("PosEntryMode.PinEntryCodeString", (String)Model.PosEntryMode.PinEntryCodeString,
+                (IEnumerable<SelectListItem>)ViewBag.PosEntryPinList)
+        </td>
+    </tr>
+    <tr id="trNetworkInternationalId">
+        <td>NetworkInternationalId</td>
+        <td>
+            <input type="text" name="NetworkInternationalId" maxlength="3" size="4" value="@Model.NetworkInternationalId"
+                onkeypress="numeric_KeyPress(this, arguments[0])" />
+        </td>
+    </tr>
+    <tr id="trPosConditionCode">
+        <td>PosConditionCode</td>
+        <td>
+            @Html.DropDownList("PosConditionCode.CodeString", (String)Model.PosConditionCode.CodeString,
+                (IEnumerable<SelectListItem>)ViewBag.PosConditionList)
+        </td>
+    </tr>
+    <tr id="trTrack2Data">
+        <td>Track2Data</td>
+        <td>
+            <input type="text" name="Track2Data" maxlength="99" size="75"
+                value="@Free.iso8583.MessageUtility.HexToString(Model.Track2Data)"
+                onkeypress="hexadecimal_KeyPress(this, arguments[0])" />
+            <input type="checkbox" name="chkTrack2Data" value="NULL" /> NULL
+        </td>
+    </tr>
+    <tr id="trTerminalId">
+        <td>TerminalId</td>
+        <td>
+            <input type="text" name="TerminalId" maxlength="8" size="10" value="@Model.TerminalId"
+                onkeypress="numeric_KeyPress(this, arguments[0])" />
+        </td>
+    </tr>
+    <tr id="trMerchantId">
+        <td>MerchantId</td>
+        <td>
+            <input type="text" name="MerchantId" maxlength="15" size="17" value="@Model.MerchantId"
+                onkeypress="numeric_KeyPress(this, arguments[0])" />
+        </td>
+    </tr>
+    <tr id="trAdditionalData">
+        <td>AdditionalData</td>
+        <td>
+            @{RequestDataEntry48 AdtData = (RequestDataEntry48)Model.AdditionalData;}
+            @if (AdtData == null) {AdtData = new RequestDataEntry48();}
+            <table class="sub-fields">
+            <tr>
+                <td>ProductCode</td>
+                <td>
+                    <input type="text" name="AdditionalData.ProductCode" maxlength="5" size="7" value="@AdtData.ProductCode"
+                        onkeypress="numeric_KeyPress(this, arguments[0])" />
+                </td>
+            </tr>
+            <tr>
+                <td>Note</td>
+                <td>
+                    <input type="text" name="AdditionalData.Note" maxlength="50" size="52" value="@AdtData.Note" />
+                </td>
+            </tr>
+            <tr>
+                <td>Fee</td>
+                <td>
+                    <input type="text" name="AdditionalData.Fee" maxlength="9" size="11" value="@AdtData.Fee"
+                        onkeypress="numeric_KeyPress(this, arguments[0])" />
+                </td>
+            </tr>
+            </table>
+            <input type="checkbox" name="chkAdditionalData" value="NULL" /> NULL
+        </td>
+    </tr>
+    <tr id="trCardholderPinBlock">
+        <td>CardholderPinBlock</td>
+        <td>
+            <input type="text" name="CardholderPinBlock" maxlength="16" size="18"
+                value="@Free.iso8583.MessageUtility.HexToString(Model.CardholderPinBlock)"
+                onkeypress="hexadecimal_KeyPress(this, arguments[0])" />
+        </td>
+    </tr>
+    <tr id="trInvoiceNumber">
+        <td>InvoiceNumber</td>
+        <td>
+            <input type="text" name="InvoiceNumber" maxlength="6" size="8" value="@Model.InvoiceNumber"
+                onkeypress="numeric_KeyPress(this, arguments[0])" />
+        </td>
+    </tr>
+    <tr id="trTransferData">
+        <td>TransferData</td>
+        <td>
+            @{Bit63Content TrData = (Bit63Content)Model.TransferData;}
+            @if (TrData == null) { TrData = new Bit63Content(); }
+            <table class="sub-fields">
+            <tr>
+                <td>TableId</td>
+                <td>
+                    <input type="text" name="TransferData.TableId" maxlength="2" size="3" value="@TrData.TableId"
+                        onkeypress="numeric_KeyPress(this, arguments[0])" />
+                </td>
+            </tr>
+            <tr>
+                <td>BeneficiaryInstitutionId</td>
+                <td>
+                    <input type="text" name="TransferData.BeneficiaryInstitutionId" maxlength="11" size="13"
+                        value="@TrData.BeneficiaryInstitutionId" onkeypress="numeric_KeyPress(this, arguments[0])" />
+                </td>
+            </tr>
+            <tr>
+                <td>BeneficiaryAccountNumber</td>
+                <td>
+                    <input type="text" name="TransferData.BeneficiaryAccountNumber" maxlength="28" size="30"
+                        value="@TrData.BeneficiaryAccountNumber" onkeypress="numeric_KeyPress(this, arguments[0])" />
+                </td>
+            </tr>
+            </table>
+            <input type="checkbox" name="chkTransferData" value="NULL" /> NULL
+        </td>
+    </tr>
+    <tr id="trMessageAuthenticationCode">
+        <td>MessageAuthenticationCode</td>
+        <td>
+            <input type="text" name="MessageAuthenticationCode" maxlength="16" size="18"
+                value="@Free.iso8583.MessageUtility.HexToString(Model.MessageAuthenticationCode)"
+                onkeypress="hexadecimal_KeyPress(this, arguments[0])" />
+        </td>
+    </tr>
+    <tr id="trTransactionDescription">
+        <td>TransactionDescription</td>
+        <td>
+            <input type="text" name="TransactionDescription" maxlength="50" size="52" value="@ViewBag.TransactionDescription" />
+            <input type="checkbox" name="chkTransactionDescription" value="NULL" /> NULL
+        </td>
+    </tr>
+    <tr id="trAdditionalField1">
+        <td>AdditionalField1</td>
+        <td>
+            <input type="text" name="AdditionalField1" maxlength="99" size="52" value="@ViewBag.AdditionalField1" />
+            <input type="checkbox" name="chkAdditionalField1" value="NULL" /> NULL
+        </td>
+    </tr>
+    <tr id="trAdditionalField2">
+        <td>AdditionalField2</td>
+        <td>
+            <input type="text" name="AdditionalField2" maxlength="5" size="7" value="@ViewBag.AdditionalField2"
+                onkeypress="numeric_KeyPress(this, arguments[0])" />
+            <input type="checkbox" name="chkAdditionalField2" value="NULL" /> NULL
+        </td>
+    </tr>
+    </table>

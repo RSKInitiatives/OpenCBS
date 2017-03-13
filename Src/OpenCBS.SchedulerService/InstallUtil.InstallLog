@@ -1,0 +1,260 @@
+﻿
+正在运行事务处理安装。
+
+正在开始安装的“安装”阶段。
+查看日志文件的内容以获得 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.exe 程序集的进度。
+该文件位于 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.InstallLog。
+
+在“安装”阶段发生异常。
+System.Security.SecurityException: 未找到源，但未能搜索某些或全部事件日志。  不可访问的日志: Security。
+
+正在开始安装的“回滚”阶段。
+查看日志文件的内容以获得 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.exe 程序集的进度。
+该文件位于 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.InstallLog。
+
+“回滚”阶段已成功完成。
+
+已完成事务处理安装。
+
+正在运行事务处理安装。
+
+正在开始安装的“安装”阶段。
+查看日志文件的内容以获得 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.exe 程序集的进度。
+该文件位于 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.InstallLog。
+
+在“安装”阶段发生异常。
+System.Security.SecurityException: 未找到源，但未能搜索某些或全部事件日志。  不可访问的日志: Security。
+
+正在开始安装的“回滚”阶段。
+查看日志文件的内容以获得 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.exe 程序集的进度。
+该文件位于 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.InstallLog。
+
+“回滚”阶段已成功完成。
+
+已完成事务处理安装。
+
+正在运行事务处理安装。
+
+正在开始安装的“安装”阶段。
+查看日志文件的内容以获得 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.exe 程序集的进度。
+该文件位于 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.InstallLog。
+
+在“安装”阶段发生异常。
+System.Security.SecurityException: 未找到源，但未能搜索某些或全部事件日志。  不可访问的日志: Security。
+
+正在开始安装的“回滚”阶段。
+查看日志文件的内容以获得 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.exe 程序集的进度。
+该文件位于 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.InstallLog。
+
+“回滚”阶段已成功完成。
+
+已完成事务处理安装。
+
+正在运行事务处理安装。
+
+正在开始安装的“安装”阶段。
+查看日志文件的内容以获得 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.exe 程序集的进度。
+该文件位于 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.InstallLog。
+
+“安装”阶段已成功完成，正在开始“提交”阶段。
+查看日志文件的内容以获得 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.exe 程序集的进度。
+该文件位于 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.InstallLog。
+
+“提交”阶段已成功完成。
+
+已完成事务处理安装。
+
+
+正在开始卸载。
+查看日志文件的内容以获得 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.exe 程序集的进度。
+该文件位于 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.InstallLog。
+
+卸载完成。
+
+正在运行事务处理安装。
+
+正在开始安装的“安装”阶段。
+查看日志文件的内容以获得 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.exe 程序集的进度。
+该文件位于 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.InstallLog。
+
+“安装”阶段已成功完成，正在开始“提交”阶段。
+查看日志文件的内容以获得 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.exe 程序集的进度。
+该文件位于 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.InstallLog。
+
+“提交”阶段已成功完成。
+
+已完成事务处理安装。
+
+正在运行事务处理安装。
+
+正在开始安装的“安装”阶段。
+查看日志文件的内容以获得 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.exe 程序集的进度。
+该文件位于 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.InstallLog。
+
+在“安装”阶段发生异常。
+System.ComponentModel.Win32Exception: 指定的服务已存在。
+
+正在开始安装的“回滚”阶段。
+查看日志文件的内容以获得 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.exe 程序集的进度。
+该文件位于 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.InstallLog。
+
+“回滚”阶段已成功完成。
+
+已完成事务处理安装。
+
+正在运行事务处理安装。
+
+正在开始安装的“安装”阶段。
+查看日志文件的内容以获得 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.exe 程序集的进度。
+该文件位于 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.InstallLog。
+
+在“安装”阶段发生异常。
+System.InvalidOperationException: 无法打开计算机“.”上的服务控制管理器。此操作可能需要其他特权。
+引发了内部异常 System.ComponentModel.Win32Exception，错误消息如下: 拒绝访问。。
+
+正在开始安装的“回滚”阶段。
+查看日志文件的内容以获得 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.exe 程序集的进度。
+该文件位于 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.InstallLog。
+
+“回滚”阶段已成功完成。
+
+已完成事务处理安装。
+
+
+正在开始卸载。
+查看日志文件的内容以获得 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.exe 程序集的进度。
+该文件位于 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.InstallLog。
+
+卸载完成。
+
+
+正在开始卸载。
+查看日志文件的内容以获得 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.exe 程序集的进度。
+该文件位于 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.InstallLog。
+
+卸载完成。
+
+正在运行事务处理安装。
+
+正在开始安装的“安装”阶段。
+查看日志文件的内容以获得 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.exe 程序集的进度。
+该文件位于 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.InstallLog。
+
+在“安装”阶段发生异常。
+System.Security.SecurityException: 未找到源，但未能搜索某些或全部事件日志。  不可访问的日志: Security。
+
+正在开始安装的“回滚”阶段。
+查看日志文件的内容以获得 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.exe 程序集的进度。
+该文件位于 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.InstallLog。
+
+“回滚”阶段已成功完成。
+
+已完成事务处理安装。
+
+
+正在开始卸载。
+查看日志文件的内容以获得 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.exe 程序集的进度。
+该文件位于 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.InstallLog。
+
+卸载完成。
+
+
+正在开始卸载。
+查看日志文件的内容以获得 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.exe 程序集的进度。
+该文件位于 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.InstallLog。
+
+卸载完成。
+
+正在运行事务处理安装。
+
+正在开始安装的“安装”阶段。
+查看日志文件的内容以获得 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.exe 程序集的进度。
+该文件位于 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.InstallLog。
+
+“安装”阶段已成功完成，正在开始“提交”阶段。
+查看日志文件的内容以获得 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.exe 程序集的进度。
+该文件位于 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.InstallLog。
+
+“提交”阶段已成功完成。
+
+已完成事务处理安装。
+
+
+正在开始卸载。
+查看日志文件的内容以获得 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.exe 程序集的进度。
+该文件位于 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.InstallLog。
+
+卸载完成。
+
+正在运行事务处理安装。
+
+正在开始安装的“安装”阶段。
+查看日志文件的内容以获得 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.exe 程序集的进度。
+该文件位于 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.InstallLog。
+
+“安装”阶段已成功完成，正在开始“提交”阶段。
+查看日志文件的内容以获得 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.exe 程序集的进度。
+该文件位于 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.InstallLog。
+
+“提交”阶段已成功完成。
+
+已完成事务处理安装。
+
+正在运行事务处理安装。
+
+正在开始安装的“安装”阶段。
+查看日志文件的内容以获得 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.exe 程序集的进度。
+该文件位于 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.InstallLog。
+
+在“安装”阶段发生异常。
+System.ComponentModel.Win32Exception: 指定的服务已存在。
+
+正在开始安装的“回滚”阶段。
+查看日志文件的内容以获得 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.exe 程序集的进度。
+该文件位于 C:\Users\thesl_000\Documents\Visual Studio 2012\Projects\opencbs\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.InstallLog。
+
+“回滚”阶段已成功完成。
+
+已完成事务处理安装。
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\Users\thesl\Documents\Visual Studio 2015\Projects\OpenCBS\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.exe assembly's progress.
+The file is located at C:\Users\thesl\Documents\Visual Studio 2015\Projects\OpenCBS\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the C:\Users\thesl\Documents\Visual Studio 2015\Projects\OpenCBS\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.exe assembly's progress.
+The file is located at C:\Users\thesl\Documents\Visual Studio 2015\Projects\OpenCBS\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+
+The uninstall is beginning.
+See the contents of the log file for the C:\Users\thesl\Documents\Visual Studio 2015\Projects\OpenCBS\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.exe assembly's progress.
+The file is located at C:\Users\thesl\Documents\Visual Studio 2015\Projects\OpenCBS\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.InstallLog.
+
+The uninstall has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the C:\Users\thesl\Documents\Visual Studio 2015\Projects\OpenCBS\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.exe assembly's progress.
+The file is located at C:\Users\thesl\Documents\Visual Studio 2015\Projects\OpenCBS\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the C:\Users\thesl\Documents\Visual Studio 2015\Projects\OpenCBS\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.exe assembly's progress.
+The file is located at C:\Users\thesl\Documents\Visual Studio 2015\Projects\OpenCBS\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+
+The uninstall is beginning.
+See the contents of the log file for the C:\Users\thesl\Documents\Visual Studio 2015\Projects\OpenCBS\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.exe assembly's progress.
+The file is located at C:\Users\thesl\Documents\Visual Studio 2015\Projects\OpenCBS\Src\OpenCBS.SchedulerService\bin\Debug\OpenCBS.SchedulerService.InstallLog.
+
+The uninstall has completed.

@@ -1,0 +1,36 @@
+﻿ @using Iso8583WebClient;
+    <table id="panel" class="fields">
+    <tr>
+        <td>ProcessingCode</td>
+        <td>
+            <input type="text" name="ProcessingCode.TransactionTypeCodeString" maxlength="2" size="3" readonly="readonly"
+                value="@Model.ProcessingCode.TransactionTypeCodeString" />
+            @Html.DropDownList("ProcessingCode.FromAccountCodeString", (String)Model.ProcessingCode.FromAccountCodeString,
+                (IEnumerable<SelectListItem>)ViewBag.AccountCodeList)
+            @Html.DropDownList("ProcessingCode.ToAccountCodeString", (String)Model.ProcessingCode.ToAccountCodeString,
+                (IEnumerable<SelectListItem>)ViewBag.AccountCodeList)
+        </td>
+    </tr>
+    <tr>
+        <td>SystemAuditTraceNumber</td>
+        <td>
+            <input type="text" name="SystemAuditTraceNumber" maxlength="12" size="14"
+                value="@Free.iso8583.MessageUtility.HexToString(Model.SystemAuditTraceNumber)"
+                onkeypress="numeric_KeyPress(this, arguments[0])" />
+        </td>
+    </tr>
+    <tr>
+        <td>NetworkInternationalId</td>
+        <td>
+            <input type="text" name="NetworkInternationalId" maxlength="3" size="4" value="@Model.NetworkInternationalId"
+                onkeypress="numeric_KeyPress(this, arguments[0])" />
+        </td>
+    </tr>
+    <tr>
+        <td>TerminalId</td>
+        <td>
+            <input type="text" name="TerminalId" maxlength="8" size="10" value="@Model.TerminalId"
+                onkeypress="numeric_KeyPress(this, arguments[0])" />
+        </td>
+    </tr>
+    </table>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MessageMap>
+    <delegate id="BytesToMmddhhmmss" class="Free.iso8583.model.DateTimeNibble" method="GetMMDDHHMMSS" param-type="System.Byte[]" />
+    <delegate id="MmddhhmmssToBytes" class="Free.iso8583.model.DateTimeNibble" method="GetBytesFromMMDDHHMMSS" param-type="System.DateTime" />
+
+    <message id="req0800" length-header="2">
+        <header name="Headers" value="0250000000" length="5" />
+        <message-type value="0800" length="2" />
+        <bitmap length="16" />
+        <bit seq="1" type="NULL" />
+        <bit seq="7" type="N" length="10" delegate="MmddhhmmssToBytes" />
+        <bit seq="11" type="N" length="6" />
+        <bit seq="48" type="ANS" length-header="2" />
+        <bit seq="70" type="N" length="3" />
+    </message>
+
+    <model id="mdlRequest0800" class="Models.Request0800, Models" message="req0800">
+        <property name="TransmissionDateTime" bit="7" type="bytes" delegate="BytesToMmddhhmmss" />
+        <property name="SystemAuditTraceNumber" bit="11" type="int" />
+        <property name="AdditionalData" bit="48" type="string" />
+        <property name="NetworkManagementInformationCode" bit="70" type="string" />
+    </model>
+
+    <message id="resp0810" length-header="2">
+        <header name="Headers" value="0250000000" length="5" />
+        <message-type value="0810" length="2" />
+        <bitmap length="16" />
+        <bit seq="1" type="NULL" />
+        <bit seq="7" type="N" length="10" from-request="true" delegate="MmddhhmmssToBytes" />
+        <bit seq="11" type="N" length="6" from-request="true" />
+        <bit seq="39" type="AN" length="2" />
+        <bit seq="48" type="ANS" length-header="2" from-request="true" />
+        <bit seq="64" type="B" length="64" />
+        <bit seq="70" type="N" length="3" from-request="true" />
+    </message>
+
+    <model id="mdlResponse0810" class="Models.Response0810, Models" message="resp0810">
+        <property name="TransmissionDateTime" bit="7" type="bytes" delegate="BytesToMmddhhmmss" />
+        <property name="SystemAuditTraceNumber" bit="11" type="int" />
+        <property name="ResponseCode" bit="39" type="string" />
+        <property name="AdditionalData" bit="48" type="string" />
+        <property name="MessageAuthenticationCode" bit="64" type="bytes" />
+        <property name="NetworkManagementInformationCode" bit="70" type="string" />
+    </model>
+
+    <delegate id="req0800Process" class="Server.Program, Server" method="ProcessRequest" param-type="Models.Request0800, Models" />
+
+    <message-to-model model="mdlRequest0800" delegate="req0800Process">
+        <mask start-byte="8" length="2" value="0800" />
+    </message-to-model>
+</MessageMap>

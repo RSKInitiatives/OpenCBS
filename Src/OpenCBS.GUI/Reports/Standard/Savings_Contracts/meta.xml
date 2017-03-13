@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<report order="1">
+    <title>Account Contracts</title>
+	<description><![CDATA[Grouped information of account contracts with aggregated balance .]]></description>
+      <param name="pDate" label="Date" type="date"/>
+	  <param name="disbursed_in" label="Deposited in" type="query" hideIfRows="2"><![CDATA[SELECT 0, 'ALL' UNION ALL SELECT id, name FROM dbo.Currencies]]></param>
+      <param name="display_in" label="Display in" type="query" hideIfRows="1"><![CDATA[SELECT id, name FROM dbo.Currencies]]></param>
+
+    <localized lang="ru-RU">
+        <title>Накопительные контракты</title>
+        <description><![CDATA[Сгруппированная информация по накопительным контрактам]]></description>
+        <param name="pDate" label="На дату" type="date"/>
+		<param name="disbursed_in" label="Валюта" type="query" hideIfRows="2"><![CDATA[SELECT 0, 'ALL' UNION ALL SELECT id, name FROM dbo.Currencies]]></param>
+        <param name="display_in" label="Отобразить в" type="query" hideIfRows="1"><![CDATA[SELECT id, name FROM dbo.Currencies]]></param>
+    </localized>
+
+    <localized lang="fr">
+        <title>Contrats d'épargne</title>
+        <description><![CDATA[Liste des contrats d'épargne actifs à une date donnée. Nom du client, code contrat, date d'ouverture, solde du compte et taux d'intérêt]]></description>
+        <param name="pDate" label="Date" type="date"/>
+		<param name="disbursed_in" label="Dépôt en" type="query" hideIfRows="2"><![CDATA[SELECT 0, 'ALL' UNION ALL SELECT id, name FROM dbo.Currencies]]></param>
+        <param name="display_in" label="Afficher en" type="query" hideIfRows="1"><![CDATA[SELECT id, name FROM dbo.Currencies]]></param>
+    </localized>
+
+ <localized lang="pt">
+   <title>contratos de poupança</title>
+	<description><![CDATA[Informações agrupadas de contratos de poupança com saldo agregado.]]></description>
+      <param name="pDate" label="data" type="date"/>
+	  <param name="disbursed_in" label="depositado em" type="query" hideIfRows="2"><![CDATA[SELECT 0, 'ALL' UNION ALL SELECT id, name FROM dbo.Currencies]]></param>
+      <param name="display_in" label="Exibição em" type="query" hideIfRows="1"><![CDATA[SELECT id, name FROM dbo.Currencies]]></param>
+ </localized>
+ 
+   	<tags>
+		<tag><![CDATA[Savings]]></tag>
+	</tags>
+	
+	<localized lang="ru-RU">
+		<tags>
+			<tag><![CDATA[Депозиты]]></tag>
+		</tags>	
+	</localized>
+	
+	<localized lang="fr">
+		<tags>
+			<tag><![CDATA[Epargne]]></tag>
+		</tags>	
+	</localized>
+	
+</report>

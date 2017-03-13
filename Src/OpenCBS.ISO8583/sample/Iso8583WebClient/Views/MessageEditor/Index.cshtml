@@ -1,0 +1,128 @@
+﻿@model dynamic
+
+@Scripts.Render("~/Scripts/jquery.maskedinput.js")
+<script type="text/javascript">
+    function isNumericKeys(e) {
+        var iKeyCode = e.charCode || e.keyCode;
+        e.KeyCode = iKeyCode;
+        if (48 <= iKeyCode && iKeyCode <= 57) return true; //Numeric keys
+        if (iKeyCode == 8) return true; //backspace
+        if (e.charCode === 0) { //Firefox
+            if (iKeyCode == 37 || iKeyCode == 39 || iKeyCode == 46) return true; //left arrow, right arrow, delete
+        }
+        return false;
+    }
+
+    function isHexadecimalKeys(e) {
+        return (isNumericKeys(e)
+            || (65 <= e.KeyCode && e.KeyCode <= 70) //'A'-'F'
+            || (97 <= e.KeyCode && e.KeyCode <= 102) //'a'-'f'
+        );
+    }
+
+    function isDecimalKeys(e, oInput) {
+        return (isNumericKeys(e)
+            || (e.KeyCode == 46 && oInput.value.indexOf(".") == -1) //Only one '.'
+        );
+    }
+
+    function cancelEvent(e) {
+        if (e.preventDefault) {
+            e.preventDefault();
+            e.stopPropagation();
+        } else {
+            e.returnValue = false;
+            e.cancelBubble = true;
+        }
+    }
+
+    function KeyPress(fnCheck, oInput, e) {
+        if (!e) e = window.event;
+        if (!fnCheck(e, oInput)) {
+            cancelEvent(e);
+            return false;
+        }
+        return true;
+    }
+
+    function numeric_KeyPress(oInput, e) {
+        return KeyPress(isNumericKeys, oInput, e);
+    }
+
+    function hexadecimal_KeyPress(oInput, e) {
+        return KeyPress(isHexadecimalKeys, oInput, e);
+    }
+
+    function decimal_KeyPress(oInput, e) {
+        return KeyPress(isDecimalKeys, oInput, e);
+    }
+
+    var g_model = @(Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model, Newtonsoft.Json.Formatting.Indented,
+        new Iso8583WebClient.ByteArrayConverter(), new Iso8583WebClient.DateTimeConverter())));
+
+    $(document).ready(function (event) {
+        var arNullChecbox = $(':checkbox[value="NULL"]');
+        arNullChecbox.change(function (event) {
+            var sPropertyName = event.target.name.substr("chk".length);
+            $(':input[name="' + sPropertyName + '"]').prop("disabled", event.target.checked);
+            $(':input[name^="' + sPropertyName + '."]').prop("disabled", event.target.checked);
+        });
+        arNullChecbox.each(function() {
+            var sPropertyName = $(this).attr("name").substr("chk".length);
+            var isNull = g_model[sPropertyName] == null;
+            $(this).prop("checked", isNull);
+            $(':input[name="' + sPropertyName + '"]').prop("disabled", isNull);
+            $(':input[name^="' + sPropertyName + '."]').prop("disabled", isNull);
+        });
+
+        $('#panel tr[id^="tr"]').each(function() {
+            var sPropertyName = $(this).attr("id").substr("tr".length);
+            if (typeof(g_model[sPropertyName]) == "undefined") {
+                $("#chk" + sPropertyName).prop("checked", true);
+                $(this).css("display", "none");
+            }
+        });
+
+        jQuery(function($){
+            $(':input[name="ExpirationDate"]').mask("99/99", {
+                completed: function() {
+                    var iMonth = parseInt(this.val().split("/")[1]);
+                    if (iMonth < 1 || iMonth > 12) {
+                        alert("Invalid value for ExpirationDate");
+                        this.val(this.val().substring(0, 2) + "/12");
+                    }
+                }
+            });
+        });
+
+        if (g_model.ExpirationDate != null) $(':input[name="ExpirationDate"]').val(g_model.ExpirationDate);
+        $("#model").css("visibility", "visible");
+    });
+</script>
+    
+    <noscript style="color:red; display:block; font-size:large; font-weight:bold; margin:10px;
+        text-align:center;">Turn on the JavaScript option in your web browser!!</noscript>
+
+<form method="post">
+    <input type="hidden" name="_EditedItem" value="@ViewBag.EditedItem" />
+    
+<div id="model" style="visibility:hidden;">
+<div style="border-style:groove; border-width: 2px; bottom:125px; left:0px; overflow:auto; padding:0px; position:absolute;
+    right:0px; top:0px;">
+    @{Html.RenderPartial((String)ViewBag.Panel);}
+</div>
+
+<div style="bottom:0px; left:0px; height:115px; overflow:hidden; position:absolute; right:0px; text-align:center">
+    <input type="submit" value="OK" />&nbsp;&nbsp;&nbsp;
+    <input type="button" value="Cancel" onclick="location.href='@Url.Content("~/")'" />
+    <div style="margin:10px; text-align:left;">
+        You may create your own model class and the edit messagemap-config.xml accordingly. But take a note that if the class
+        is outside Free.iso8583.dll, you must write the assembly name after the class name, such as:<br />
+        <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;class="AnotherLibrary.model.RequestDataEntry48, AnotherLibrary"<br />
+        <br />
+        Consult .NET documentation explaining System.Type.GetType method.
+    </div>
+</div>
+</div>
+</form>

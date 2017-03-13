@@ -1,0 +1,120 @@
+v 1.8 (20150910)
+	Fixed bugs:
+		- Some bugs pertaining configuration
+	
+	Changes/Extensions to version 1.7.0.1:
+		- Class MessageHeaderConfig
+			* Property Value is renamed to StringValue.
+			* New property: Value whose type of byte[].
+		- Class MaskConfig
+			* Property Value is renamed to StringValue.
+			* New property: Value whose type of byte[].
+		- All property of config classes: all internal set becomes public
+		- New interface IConfigParser, that must be implemented by configuration parser
+		- New class ConfigParser which inherits IConfigParser
+		- class XmlConfigParser becomes internal and inherits ConfigParser, moved to config namespace
+		- Attribute configuration as an another alternative to XML configuration. It includes class AttributeConfigParser
+		- Class MessageProcessor
+			* New method: Load(IConfigParser configParser)
+			* New method: Load(Type messageToModelMapping)
+		- Class MessageListener
+			* New method: SetConfig(String fileConfigPath, String baseDir)
+			* New method: SetConfig(String fileConfigPath)
+			* New method: SetConfig(Type messageToModelMapping)
+
+v 1.7.0.1 (20140407)
+	Changes/Extensions to version 1.7:
+		- Return type of method ParsedMessageContainer.RoFields becomes IDictionary<int, MessageField>.
+		  Previously, it was IList<KeyValuePair<int, MessageField>>
+		- Return type of method CompiledMessageContainer.RoFields becomes IDictionary<int, CompiledMessageField>.
+		  Previously, it was IList<KeyValuePair<int, CompiledMessageField>>
+
+v 1.7 (20140331)
+	Fixed bugs:
+		- Some bugs in clas MessageUtility and Util
+	
+	Changes/Extensions to version 1.6.1:
+		- [XML config] New type for <bit> element, that is 'BitMap' (supports tertiary BitMap).
+		- Abstract class IMessageHeaderConfig becomes interface. Length setter is dropped.
+		- Class MessageFieldConfig
+			* Property DividerForBytesLength and BytesLength are dropped. They can be substituted by MessageField.GetBytesLengthFromActualLength method.
+			* Property Length and LengthHeader are not nullable anymore. Negative value (not null) indicates it's not set yet.
+		- Class MessageBitMapConfig inherits MessageFieldConfig beside implementing IMessageHeaderConfig
+		- Class IMessageHeader
+			* Renamed to MessageElement
+			* Property Bytes is splitted to be method SetValue(byte[] value) and readonly property BytesValue
+			* Property RoBytes is renamed to RoBytesValue
+		- Added property StringValue, MessageVersion, MessageClass, MessageFunction and MessageOrigin to class MessageTypeHeader.
+		- Added enum MessageVersion, MessageClass, MessageFunction and MessageOrigin.
+		- Class MessageField
+			* Inherits MessageElement.
+			* Property Length is not nullbale anymore, negative value (not null) indicates it's not set yet.
+			* Added static method GetBytesLengthFromActualLength
+		- Class MessageBitMap
+			* inherits MessageField
+			* Added optional parameter (startBit) to static method SetBitOn
+			* Added optional parameter (startBit) to static method IsBitOn
+			* Added method SetBit
+			* Added method IsOutOfRange
+			* Added property StartBit
+			* Added property FieldSeq
+			* Added property IsNull
+		- Added class MessageBitMapCollection
+		- Class MessageParser and its Parse method become public. Previously, they were internal.
+		- Class MessageCompiler and its Compile method become public. Previously, they were internal.
+		- Added property MessageType and BitMap to class CompiledMessageContainer
+		- IParsedMessage
+			* The type of property BitMap becomes MessageBitMapCollection.
+			* The type of property MessageType becomes MessageTypeHeader.
+		- Added property Logger.Output
+		- Added optional parameter (maxCharsPerLine) to method MessageUtility.HexToReadableString
+		- Namespace hpdhEdc is renamed to example
+
+v 1.6.1 (20131010)
+	Fixed bugs:
+		- Method ParseChildModels of class XmlConfigParser
+	
+	Changes/Extensions to version 1.6:
+		- Access modifier of property Headers of class MessageConfig becomes internal. Formerly, it was public.
+		- Added property RoHeaders to class MessageConfig for access public of property Headers.
+		- Access modifier of property Fields of class MessageConfig becomes internal. Formerly, it was public.
+		- Added property RoFields to class MessageConfig for access public of property Fields.
+		- Access modifier of property Properties of class ModelConfig becomes internal. Formerly, it was public.
+		  Also it becomes Dictionary (previously, it was List), indexed by the seq of the corresponding message field.
+		- Added property RoProperties to class ModelConfig for access public of property Properties.
+		- Added method GetPropertyMappedToField to class ModelConfig.
+		- Dropped property ModelProperty of class MessageFieldConfig. The corresponding ModelPropertyConfig can be sougth by using method
+		  GetPropertyMappedToField of the correponding ModelConfig. It enables one message can be mapped to more than one model.
+		- Added new enumeration value to LogLevel: MuteLog = 99 (to mute all logs).
+		- Added property IsStackTraceShown to class Logger
+		- Added method GetMMDDHHMMSS and GetBytesFromMMDDHHMMSS to class DateTimeNibble
+
+v 1.6 (20130910)
+	Changes/Extensions to version 1.5:
+		- [XML config] Added another possible type for <bit> element, that is 'NULL'.
+		- [XML config] 'save' attribute of <bit> element is dropped.
+		- [XML config] Added two other possible values: 'notEquals' and 'zero', for 'result' attribute of <mask> element.
+		- Added property ModelProperty for class MessageFieldConfig
+		- Added event StartListeningEvent to MessageListener
+		- Added level 'notice', 'warning' and 'error' in Logger. Logs when a message comes with level 'notice'.
+
+v 1.5 (20130204)
+	Fixed bugs:
+		-Added lock statement in Logger for thread-safe fashion in multi-thread process.
+		-How to determine the end of message when reading/accepting message from socket (especially for MessageListener and MessageClient).
+		-Fixed threading in message listener especially dealing with MaxConnections
+	
+	Changes/Extensions to version 1:
+		-IMessageSender renamed to IMessageStream and added a new member: method Receive(byte[] buffer, int offset, int count)
+		-Send method of IMessageStream may return an empty array (not null) to ask the message processor to read from its socket directly.
+		-Supports SSL/TLS communication (especially for MessageListener and MessageClient).
+		-May set read/write timeout (especially for MessageListener and MessageClient).
+		-SetConfigPath method and ConfigPath property of MessageListener become static
+		-The callback (MessageCallback or MessageToModelConfig.ProcessModel) still gets called when an error happens but with null value
+		 for its parameter.
+		-MaskConfig has a new property: MinBytesCountToCheck
+
+v 1.0 (20120802)
+
+v 1.0 beta (20111229)
+

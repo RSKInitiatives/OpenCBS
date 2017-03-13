@@ -1,0 +1,146 @@
+﻿using Common.Logging;
+using OpenCBS.Services;
+using Quartz;
+using System;
+using System.Linq;
+using OpenCBS.Messaging.Email;
+using OpenCBS.Messaging.Interfaces;
+using OpenCBS.Services.Messaging;
+using OpenCBS.Messaging.Custom;
+using OpenCBS.Shared;
+using OpenCBS.Messaging.SMS;
+using OpenCBS.Enums;
+using OpenCBS.Shared.Settings;
+using OpenCBS.CoreDomain;
+
+namespace OpenCBS.SchedulerService.Jobs
+{
+    public class MessagingJob : IJob
+    {
+        private static ILog Log = LogManager.GetLogger("MP_WS_info");
+        
+        private static IServices ServiceProvider
+        {
+            get
+            {
+                return ServicesProvider.GetInstance();                
+            }
+        }
+
+        public void Execute(IJobExecutionContext context)
+        {
+            try
+            {
+                Log.Debug("");
+                Log.Info("Executing queued message send job");
+
+                IEmailSender _emailSender = new DefaultEmailSender();
+                QueuedEmailServices _queuedEmailService = ServiceProvider.GetQueuedEmailServices();
+                QueuedSMSServices _queuedSMSService = ServiceProvider.GetQueuedSMSServices();
+                ApplicationSettingsServices generalSettingsService = ServiceProvider.GetApplicationSettingsServices();
+                
+                var sendTriesStart = 0;
+                var sendTriesEnd = OpenCBSConstants.MessagingMaxSentTries;
+                                
+                int enableSmsMsg = Convert.ToInt32(generalSettingsService.SelectParameterValue(OGeneralSettings.ENABLE_SMS_MESSAGING));
+                Log.Debug("Send SMS status: " + enableSmsMsg);
+                if (enableSmsMsg == 1)
+                {
+                    var queuedsms = _queuedSMSService.SearchSMSs(null, null, null, null, true, sendTriesStart, sendTriesEnd, false, 0, 10000);
+
+                    Log.Debug("");
+                    Log.Debug("-------------------------------------");
+                    Log.Info("Sending SMS");
+                    Log.Debug("Queued sms count: " + queuedsms.Count);
+
+                    foreach (var qe in queuedsms)
+                    {
+                        try
+                        {
+                            ISms sms = new EstoreSms();
+                            sms.UserName = Convert.ToString(generalSettingsService.SelectParameterValue(OGeneralSettings.SMS_GATEWAY_USERNAME));
+                            sms.Password = Convert.ToString(generalSettingsService.SelectParameterValue(OGeneralSettings.SMS_GATEWAY_PASSWORD));
+
+                            sms.Message = qe.Message;
+                            sms.AddRecipient(qe.Recipient);
+                            sms.MessageFrom = qe.From;
+                                                        
+                            qe.Response = sms.SendSms();
+
+                            if (qe.Response.ToLower().Contains("ok"))
+                                qe.SentOnUtc = DateTime.UtcNow;
+                            Log.Info(qe.Response);
+                        }
+                        catch (Exception exc)
+                        {
+                            Log.Error(string.Format("Error sending sms: {0}", exc.Message), exc);
+                        }
+                        finally
+                        {
+                            qe.SentTries = qe.SentTries + 1;
+                            _queuedSMSService.Update(qe);
+                        }
+                    }
+                }
+
+                var queuedEmails = _queuedEmailService.SearchEmails(null, null, null, null, true, sendTriesStart, sendTriesEnd, false, 0, 10000);
+
+                Log.Debug("");
+                Log.Debug("");
+                Log.Debug("-------------------------------------");
+                Log.Info("Sending Emails");
+                Log.Debug("Queued email count: " + queuedEmails.Count);
+
+                foreach (var qe in queuedEmails)
+                {
+                    var bcc = String.IsNullOrWhiteSpace(qe.Bcc)
+                                ? null
+                                : qe.Bcc.Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
+                    var cc = String.IsNullOrWhiteSpace(qe.CC)
+                                ? null
+                                : qe.CC.Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
+
+                    try
+                    {
+                        var smtpContext = new SmtpContext(qe.EmailAccount);
+
+                        var msg = new EmailMessage(
+                            new EmailAddress(qe.To, qe.ToName),
+                            qe.Subject,
+                            qe.Body,
+                            new EmailAddress(qe.From, qe.FromName));
+
+                        if (qe.ReplyTo.HasValue())
+                        {
+                            msg.ReplyTo.Add(new EmailAddress(qe.ReplyTo, qe.ReplyToName));
+                        }
+
+                        if (cc != null)
+                            msg.Cc.AddRange(cc.Where(x => x.HasValue()).Select(x => new EmailAddress(x)));
+
+                        if (bcc != null)
+                            msg.Bcc.AddRange(bcc.Where(x => x.HasValue()).Select(x => new EmailAddress(x)));
+
+                        _emailSender.SendEmail(smtpContext, msg);
+
+                        qe.SentOnUtc = DateTime.UtcNow;
+                    }
+                    catch (Exception exc)
+                    {
+                        Log.Error(string.Format("Error sending e-mail: {0}", exc.Message), exc);
+                    }
+                    finally
+                    {
+                        qe.SentTries = qe.SentTries + 1;
+                        _queuedEmailService.Update(qe);
+                    }
+                }
+                Log.Info("Queued message send completed");
+            }
+            catch (Exception exc)
+            {
+                Log.Error(exc);          
+            }
+        }
+    }
+}

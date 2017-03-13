@@ -1,0 +1,141 @@
+﻿// Octopus MFS is an integrated suite for managing a Micro Finance Institution: 
+// clients, contracts, accounting, reporting and risk
+// Copyright © 2006,2007 OCTO Technology & OXUS Development Network
+//
+// This program is free software; you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation; either version 2 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Lesser General Public License for more details.
+//
+// You should have received a copy of the GNU Lesser General Public License along
+// with this program; if not, write to the Free Software Foundation, Inc.,
+// 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+//
+// Website: http://www.opencbs.com
+// Contact: contact@opencbs.com
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+using OpenCBS.CoreDomain.EconomicActivities;
+using OpenCBS.Enums;
+
+namespace OpenCBS.CoreDomain.Clients
+{
+    [Serializable]
+    public class Person : Client
+    {
+        private string _firstName;
+        private string _lastName;
+        private char sex = OGender.Male;
+
+        public string BirthPlace { get; set; }
+        public string Nationality { get; set; }
+        public string Image { get; set; }
+
+        public string ImagePath { get; set; }
+        public string Image2Path { get; set;}
+        public string Image3Path { get; set; }
+        public bool IsImageAdded { get; set; }
+        public bool IsImage2Added {get; set;}
+        public bool IsImage3Added { get; set; }
+        public bool IsImageDeleted { get; set; }
+        public bool IsImage2Deleted { get; set; }
+        public bool IsImage3Deleted { get; set; }
+        public bool IsImageUpdated { get; set; }
+        public bool IsImage2Updated { get; set; }
+        public bool IsImage3Updated { get; set; }
+
+        public string IdentificationData { get; set; }
+        public string FatherName { get; set; }
+        public DateTime? DateOfBirth { get; set; }
+        public EconomicActivity Activity { get; set; }
+
+        public User FavouriteLoanOfficer { get; set; }
+        public int? FavouriteLoanOfficerId { get; set; }
+
+        private OParticularsType particularsType = OParticularsType.DriverLicense;
+        public OParticularsType ParticularsType 
+        {
+            get { return particularsType; }
+            set { particularsType = value; }
+        }
+
+        public string ParticularsIDNumber { get; set; }
+        public DateTime? ParticularsIssueDate { get; set; }
+        public DateTime? ParticularsExpiryDate { get; set; }        
+
+
+        public Person() : base(new List<Project>(), OClientTypes.Person)
+        {
+        }
+
+        public override string Name
+        {
+            get { return string.Format("{0} {1}", _firstName, _lastName); }
+            set { _firstName = value; }
+        }
+
+        public override IClient Copy()
+        {
+            Person clonedPerson = (Person)MemberwiseClone();
+            return clonedPerson;
+        }
+
+        public char Sex
+        {
+            get { return sex; }
+            set { sex = value; }
+        }
+
+        public string FirstName
+        {
+            get { return _firstName; }
+            set { _firstName = value; }
+        }
+
+        public string LastName
+        {
+            get { return _lastName; }
+            set { _lastName = value; }
+        }
+
+        public override string ToString()
+        {
+            return string.Format("{0} {1}", FirstName, LastName);
+        }
+
+        public string FullName
+        {
+            get {
+                var builder = new StringBuilder();
+                
+                var firstNameTrimed = FirstName == null ? null : FirstName.Trim();
+                if (!string.IsNullOrEmpty(firstNameTrimed)) builder.Append(firstNameTrimed);
+                
+                var lastNameTrimed = LastName == null ? null : LastName.Trim();
+                if (!string.IsNullOrEmpty(lastNameTrimed))
+                    builder.Append(builder.Length == 0 ? lastNameTrimed : " " + lastNameTrimed);
+
+                var fatherNameTrimed = FatherName == null ? null : FatherName.Trim();
+                if (!string.IsNullOrEmpty(fatherNameTrimed))
+                    builder.Append(builder.Length == 0 ? fatherNameTrimed : " " + fatherNameTrimed);
+
+                return builder.ToString();
+            }
+        }
+
+        public User RelationshipOfficer { get; set; }
+        public int? RelationshipOfficerId { get; set; }
+
+
+        public bool? SMSDelivery { get; set; }
+
+        public bool? EmailDelivery { get; set; }
+    }
+}

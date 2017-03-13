@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ALLOWS_MULTIPLE_GROUPS.Explanation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ALLOWS_MULTIPLE_GROUPS.Title" xml:space="preserve">
+    <value>Allow clients to be in multiple groups?</value>
+  </data>
+  <data name="ALLOWS_MULTIPLE_GROUPS.Unit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ALLOWS_MULTIPLE_LOANS.Explanation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ALLOWS_MULTIPLE_LOANS.Title" xml:space="preserve">
+    <value>Allow clients to have multiple loans?</value>
+  </data>
+  <data name="ALLOWS_MULTIPLE_LOANS.Unit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="APPLICATION_TIMEOUT.Explanation" xml:space="preserve">
+    <value>OpenCBS auto logs out active user if inactive for defined minutes</value>
+  </data>
+  <data name="APPLICATION_TIMEOUT.Title" xml:space="preserve">
+    <value>Application auto time out</value>
+  </data>
+  <data name="APPLICATION_TIMEOUT.Unit" xml:space="preserve">
+    <value>Minutes</value>
+  </data>
+  <data name="AUTOMATE_CHEQUE_DEPOSIT.Title" xml:space="preserve">
+    <value>Automate cheque deposit close out</value>
+  </data>
+  <data name="AUTOMATIC_ID.Explanation" xml:space="preserve">
+    <value>Choose yes to have the system automatically generate IDs for new clients</value>
+  </data>
+  <data name="AUTOMATIC_ID.Title" xml:space="preserve">
+    <value>Use automatic ID generation?</value>
+  </data>
+  <data name="AUTOMATIC_ID.Unit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CALCULATION_LATE_FEES_DURING_PUBLIC_HOLIDAYS.Explanation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CALCULATION_LATE_FEES_DURING_PUBLIC_HOLIDAYS.Title" xml:space="preserve">
+    <value>Calculate late fees during public holidays?</value>
+  </data>
+  <data name="CALCULATION_LATE_FEES_DURING_PUBLIC_HOLIDAYS.Unit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CHEQUE_CLEAR_PERIOD.Title" xml:space="preserve">
+    <value>Cheque clear period</value>
+  </data>
+  <data name="CITY_MANDATORY.Explanation" xml:space="preserve">
+    <value>Determines whether a city must be chosen (or entered) for addresses</value>
+  </data>
+  <data name="CITY_MANDATORY.Title" xml:space="preserve">
+    <value>Make "City" mandatory?</value>
+  </data>
+  <data name="CITY_MANDATORY.Unit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DONOT_SKIP_WEEKENDS_IN_INSTALLMENTS_DATE.Explanation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DONOT_SKIP_WEEKENDS_IN_INSTALLMENTS_DATE.Title" xml:space="preserve">
+    <value>Include weekends in installment generation?</value>
+  </data>
+  <data name="DONOT_SKIP_WEEKENDS_IN_INSTALLMENTS_DATE.Unit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ENABLE_SMS_MESSAGING.Title" xml:space="preserve">
+    <value>Enable SMS messaging</value>
+  </data>
+  <data name="ENFORCE_ID_PATTERN.Explanation" xml:space="preserve">
+    <value>Enforces client ID to be generated in the required format</value>
+  </data>
+  <data name="ENFORCE_ID_PATTERN.Title" xml:space="preserve">
+    <value>Enforce ID pattern</value>
+  </data>
+  <data name="GROUP_MAX_MEMBERS.Explanation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GROUP_MAX_MEMBERS.Title" xml:space="preserve">
+    <value>Maximum group members</value>
+  </data>
+  <data name="GROUP_MAX_MEMBERS.Unit" xml:space="preserve">
+    <value>Members</value>
+  </data>
+  <data name="GROUP_MIN_MEMBERS.Explanation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GROUP_MIN_MEMBERS.Title" xml:space="preserve">
+    <value>Minimum group members</value>
+  </data>
+  <data name="GROUP_MIN_MEMBERS.Unit" xml:space="preserve">
+    <value>Members</value>
+  </data>
+  <data name="ID_PATTERN.Explanation" xml:space="preserve">
+    <value>Allows you to determine a single format for all client IDs</value>
+  </data>
+  <data name="ID_PATTERN.Title" xml:space="preserve">
+    <value>Standard ID pattern</value>
+  </data>
+  <data name="ID_PATTERN.Unit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="INTERESTS_ALSO_CREDITED_IN_FL.Explanation" xml:space="preserve">
+    <value>Determines whether or not interest repayments are added to the funding line in the same way the principal is</value>
+  </data>
+  <data name="INTERESTS_ALSO_CREDITED_IN_FL.Title" xml:space="preserve">
+    <value>Interest credited to funding line?</value>
+  </data>
+  <data name="INTERESTS_ALSO_CREDITED_IN_FL.Unit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="INTEREST_RATE_DECIMAL_PLACES.Explanation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="INTEREST_RATE_DECIMAL_PLACES.Title" xml:space="preserve">
+    <value>Number of decimal places in interest rates</value>
+  </data>
+  <data name="INTEREST_RATE_DECIMAL_PLACES.Unit" xml:space="preserve">
+    <value>Decimal places</value>
+  </data>
+  <data name="MFI_NAME.Explanation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MFI_NAME.Title" xml:space="preserve">
+    <value>MFI name</value>
+  </data>
+  <data name="MFI_NAME.Unit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NSG_MAX_MEMBERS.Explanation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NSG_MAX_MEMBERS.Title" xml:space="preserve">
+    <value>Maximum number of village bank members</value>
+  </data>
+  <data name="NSG_MAX_MEMBERS.Unit" xml:space="preserve">
+    <value>Members</value>
+  </data>
+  <data name="NSG_MIN_MEMBERS.Explanation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NSG_MIN_MEMBERS.Title" xml:space="preserve">
+    <value>Minimum number of village bank members</value>
+  </data>
+  <data name="NSG_MIN_MEMBERS.Unit" xml:space="preserve">
+    <value>Members</value>
+  </data>
+  <data name="NUMBER_DECIMAL_SEPARATOR.Explanation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NUMBER_DECIMAL_SEPARATOR.Title" xml:space="preserve">
+    <value>Decimal separator</value>
+  </data>
+  <data name="NUMBER_DECIMAL_SEPARATOR.Unit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NUMBER_GROUP_SEPARATOR.Explanation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NUMBER_GROUP_SEPARATOR.Title" xml:space="preserve">
+    <value>Integer separator</value>
+  </data>
+  <data name="NUMBER_GROUP_SEPARATOR.Unit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OLB_BEFORE_REPAYMENT.Explanation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OLB_BEFORE_REPAYMENT.Title" xml:space="preserve">
+    <value>Show the pre-repayment OLB in loan schedules?</value>
+  </data>
+  <data name="OLB_BEFORE_REPAYMENT.Unit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PENDING_SAVINGS_MODE.Explanation" xml:space="preserve">
+    <value>Use this to have certain payment methods categorized as "pending" when they are first entered in the system</value>
+  </data>
+  <data name="PENDING_SAVINGS_MODE.Title" xml:space="preserve">
+    <value>Which of the following payment methods should be registered as "Pending" until further action?</value>
+  </data>
+  <data name="PENDING_SAVINGS_MODE.Unit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="REPORT_TIMEOUT.Explanation" xml:space="preserve">
+    <value>Determines number of seconds the system should wait while attempting to open a report</value>
+  </data>
+  <data name="REPORT_TIMEOUT.Title" xml:space="preserve">
+    <value>Report timeout</value>
+  </data>
+  <data name="REPORT_TIMEOUT.Unit" xml:space="preserve">
+    <value>Seconds</value>
+  </data>
+  <data name="SHORT_DATE_FORMAT.Explanation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SHORT_DATE_FORMAT.Title" xml:space="preserve">
+    <value>Date format</value>
+  </data>
+  <data name="SHORT_DATE_FORMAT.Unit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SHOW_EXTRA_INTEREST_COLUMN.Explanation" xml:space="preserve">
+    <value>This column displays interest accumulated after a missed repayment for loans where interest is based on the actual rather than planned OLB</value>
+  </data>
+  <data name="SHOW_EXTRA_INTEREST_COLUMN.Title" xml:space="preserve">
+    <value>Show extra interest column?</value>
+  </data>
+  <data name="SHOW_EXTRA_INTEREST_COLUMN.Unit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SMS_CHARGE.Title" xml:space="preserve">
+    <value>SMS charge</value>
+  </data>
+  <data name="SMS_FROM_NUMBER.Title" xml:space="preserve">
+    <value>SMS from number</value>
+  </data>
+  <data name="SMS_GATEWAY_PASSWORD.Title" xml:space="preserve">
+    <value>SMS gateway password</value>
+  </data>
+  <data name="SMS_GATEWAY_USERNAME.Title" xml:space="preserve">
+    <value>SMS gateway user name</value>
+  </data>
+  <data name="STAMP_DUTY_VALID_ABOVE.Title" xml:space="preserve">
+    <value>Duty stamp valid above</value>
+  </data>
+  <data name="USE_DAILY_ACCRUAL_OF_PENALTY.Explanation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="USE_DAILY_ACCRUAL_OF_PENALTY.Title" xml:space="preserve">
+    <value>Use daily accrual of penalties?</value>
+  </data>
+  <data name="USE_DAILY_ACCRUAL_OF_PENALTY.Unit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="USE_EXTERNAL_ACCOUNTING.Explanation" xml:space="preserve">
+    <value>Enables/disables the accounting module</value>
+  </data>
+  <data name="USE_EXTERNAL_ACCOUNTING.Title" xml:space="preserve">
+    <value>Use external accounting module</value>
+  </data>
+  <data name="WEEK_END_DAY1.Explanation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WEEK_END_DAY1.Title" xml:space="preserve">
+    <value>Weekend day 1</value>
+  </data>
+  <data name="WEEK_END_DAY1.Unit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WEEK_END_DAY2.Explanation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WEEK_END_DAY2.Title" xml:space="preserve">
+    <value>Weekend day 2</value>
+  </data>
+  <data name="WEEK_END_DAY2.Unit" xml:space="preserve">
+    <value />
+  </data>
+</root>

@@ -1,0 +1,20 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<label>
+  <MAIN_REPORT>
+    <fn_footer>"Contrats d'épargne actifs"</fn_footer>
+    <Text16>Contrats d'épargne</Text16>
+    <Text3>Type produit</Text3>
+    <Text2>Code du contrat</Text2>
+    <Text4>Nom du produit</Text4>
+    <Text5>Nom du client</Text5>
+    <Text6>Code produit</Text6>
+    <Text7>Créé le</Text7>
+    <Text8>Balance</Text8>
+    <Text9>Taux d'intérêt %</Text9>
+    <Text10>Sous-total</Text10>
+    <Text14>De</Text14>
+    <Text11>Sous-total</Text11>
+    <Text17>De toute l'épargne</Text17>
+    <Text12>Total</Text12>
+  </MAIN_REPORT>
+</label>

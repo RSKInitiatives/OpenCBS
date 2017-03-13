@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="OpenCBS.PostBridge.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="maxConnections" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">50</Value>
+    </Setting>
+    <Setting Name="ipAddress" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">127.0.0.1</Value>
+    </Setting>
+    <Setting Name="port" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">3107</Value>
+    </Setting>
+    <Setting Name="sslCertificateFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">..\..\sslcerts\server.p12</Value>
+    </Setting>
+    <Setting Name="sslCertificatePwd" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="confPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Free.iso8583.example.MessageToModelMapping, Free.iso8583</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

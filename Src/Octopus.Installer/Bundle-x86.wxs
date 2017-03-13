@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" 
+     xmlns:util="http://schemas.microsoft.com/wix/UtilExtension" 
+     xmlns:bal="http://schemas.microsoft.com/wix/BalExtension">
+  <Bundle Name="OPENCBS" Version="15.8.0.0" Manufacturer="OPENCBS" UpgradeCode="0d75de4b-4e07-47e6-8de0-fe44768f4d57">
+		<BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLicense">
+      <Payload SourceFile="D:\build\Src\OpenCBS.Installer\Resources\logo.bmp" />
+    </BootstrapperApplicationRef>
+
+    <Variable Name="FolderEditbox" Type="string" Value="" />
+    
+    <WixVariable Id="WixStdbaLicenseRtf" Value="D:\build\Src\OpenCBS.Installer\License\LGPL3.rtf" />
+    <WixVariable Id="WixStdbaThemeXml" Value="D:\build\Src\OpenCBS.Installer\Resources\RtfTheme.xml" />
+    <WixVariable Id="WixStdbaThemeWxl" Value="D:\build\Src\OpenCBS.Installer\Resources\RtfTheme.wxl" />
+    
+		<Chain>
+			<!-- TODO: Define the list of chained packages. -->
+      <MsiPackage SourceFile="D:\build\Src\OpenCBS.Installer\opencbs-x86.msi">
+        <MsiProperty Name="PlatformProgramFilesFolder" Value="[FolderEditbox]" />
+      </MsiPackage>
+      <MsiPackage SourceFile="D:\dist\MS SQL Server\LocalDB\SqlLocalDB_x86.MSI">
+        <MsiProperty Name="IACCEPTSQLLOCALDBLICENSETERMS" Value="YES" />
+      </MsiPackage>
+		</Chain>
+	</Bundle>
+</Wix>

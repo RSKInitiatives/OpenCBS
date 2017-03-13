@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{49F28591-E267-4993-9505-A3037C6F8C2E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OpenCBS.Messaging</RootNamespace>
+    <AssemblyName>OpenCBS.Messaging</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CodeScales.Http">
+      <HintPath>..\..\Lib\CodeScales.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Fasterflect, Version=2.1.3.0, Culture=neutral, PublicKeyToken=38d18473284c1ca7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Fasterflect.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\..\Lib\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Custom\DisposableObject.cs" />
+    <Compile Include="Custom\Error.cs" />
+    <Compile Include="Custom\ExtensionHelpers.cs" />
+    <Compile Include="Custom\FileLock.cs" />
+    <Compile Include="Custom\GenericListTypeConverter.cs" />
+    <Compile Include="Custom\Guard.cs" />
+    <Compile Include="Custom\HttpUtil.cs" />
+    <Compile Include="Custom\Multimap.cs" />
+    <Compile Include="Custom\RestClient.cs" />
+    <Compile Include="Custom\ThreadSafeList.cs" />
+    <Compile Include="Custom\Token.cs" />
+    <Compile Include="Custom\Utilities\ActionDisposable.cs" />
+    <Compile Include="Custom\Utilities\DictionaryConverter.cs" />
+    <Compile Include="Custom\Utilities\Misc.cs" />
+    <Compile Include="Custom\Utilities\ReadLockDisposable.cs" />
+    <Compile Include="Custom\Utilities\TreeNode.cs" />
+    <Compile Include="Custom\Utilities\UpgradeableReadLockDisposable.cs" />
+    <Compile Include="Custom\Utilities\WriteLockDisposable.cs" />
+    <Compile Include="Email\Attachment.cs" />
+    <Compile Include="Email\DefaultEmailSender.cs" />
+    <Compile Include="Email\EmailAddress.cs" />
+    <Compile Include="Email\EmailException.cs" />
+    <Compile Include="Email\EmailMessage.cs" />
+    <Compile Include="Email\IEmailSenderExtensions.cs" />
+    <Compile Include="Email\SmtpContext.cs" />
+    <Compile Include="Events\EventPublisherExtensions.cs" />
+    <Compile Include="Events\IEventPublisher.cs" />
+    <Compile Include="Events\NullEventPublisher.cs" />
+    <Compile Include="Interfaces\ICloneable.cs" />
+    <Compile Include="Interfaces\IDateTimeHelper.cs" />
+    <Compile Include="Interfaces\IEmailSender.cs" />
+    <Compile Include="Interfaces\IMergedData.cs" />
+    <Compile Include="Interfaces\IMessageTokenProvider.cs" />
+    <Compile Include="Interfaces\IOrdered.cs" />
+    <Compile Include="Interfaces\IMessagingService.cs" />
+    <Compile Include="Messages\EmailAccountSettings.cs" />
+    <Compile Include="Messages\ITokenizer.cs" />
+    <Compile Include="Messages\MessageTemplatesSettings.cs" />
+    <Compile Include="Messages\MessageTokenProvider.cs" />
+    <Compile Include="Messages\Tokenizer.cs" />
+    <Compile Include="Messages\MessagingService.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SMS\BetaSms.cs" />
+    <Compile Include="SMS\EstoreSms.cs" />
+    <Compile Include="Interfaces\ISms.cs" />
+    <Compile Include="SMS\MCast.cs" />
+    <Compile Include="SMS\RouteSms.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OpenCBS.CoreDomain\OpenCBS.CoreDomain.csproj">
+      <Project>{d539c388-3848-4a3e-ab87-42b8e329755a}</Project>
+      <Name>OpenCBS.CoreDomain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenCBS.Enums\OpenCBS.Enums.csproj">
+      <Project>{8afc1e87-3856-4f05-8280-5360d33c200b}</Project>
+      <Name>OpenCBS.Enums</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenCBS.Manager\OpenCBS.Manager.csproj">
+      <Project>{963a6b8b-779c-4052-b39a-8abbfbf16c1a}</Project>
+      <Name>OpenCBS.Manager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenCBS.Services\OpenCBS.Services.csproj">
+      <Project>{a859d97a-51fb-4961-af07-5856640511af}</Project>
+      <Name>OpenCBS.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenCBS.Shared\OpenCBS.Shared.csproj">
+      <Project>{b3288e21-e5a9-4620-bef3-afb0b207655c}</Project>
+      <Name>OpenCBS.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,1627 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tableLayoutPanel1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnSaving.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnSaving.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.25pt</value>
+  </data>
+  <data name="btnSaving.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnSaving.Location" type="System.Drawing.Point, System.Drawing">
+    <value>133, 23</value>
+  </data>
+  <data name="btnSaving.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 25</value>
+  </data>
+  <data name="btnSaving.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="btnSaving.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="&gt;&gt;btnSaving.Name" xml:space="preserve">
+    <value>btnSaving</value>
+  </data>
+  <data name="&gt;&gt;btnSaving.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSaving.Parent" xml:space="preserve">
+    <value>gbxButtons</value>
+  </data>
+  <data name="&gt;&gt;btnSaving.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnClose.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="btnClose.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.25pt</value>
+  </data>
+  <data name="btnClose.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnClose.Location" type="System.Drawing.Point, System.Drawing">
+    <value>267, 23</value>
+  </data>
+  <data name="btnClose.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 25</value>
+  </data>
+  <data name="btnClose.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="btnClose.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="&gt;&gt;btnClose.Name" xml:space="preserve">
+    <value>btnClose</value>
+  </data>
+  <data name="&gt;&gt;btnClose.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnClose.Parent" xml:space="preserve">
+    <value>gbxButtons</value>
+  </data>
+  <data name="&gt;&gt;btnClose.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="gbxButtons.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="gbxButtons.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 486</value>
+  </data>
+  <data name="gbxButtons.Size" type="System.Drawing.Size, System.Drawing">
+    <value>404, 57</value>
+  </data>
+  <data name="gbxButtons.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;gbxButtons.Name" xml:space="preserve">
+    <value>gbxButtons</value>
+  </data>
+  <data name="&gt;&gt;gbxButtons.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbxButtons.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;gbxButtons.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tbDescription.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="tbDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>128, 163</value>
+  </data>
+  <data name="tbDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>264, 20</value>
+  </data>
+  <data name="tbDescription.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;tbDescription.Name" xml:space="preserve">
+    <value>tbDescription</value>
+  </data>
+  <data name="&gt;&gt;tbDescription.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbDescription.Parent" xml:space="preserve">
+    <value>gbxDetails</value>
+  </data>
+  <data name="&gt;&gt;tbDescription.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblDescription.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblDescription.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="lblDescription.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 168</value>
+  </data>
+  <data name="lblDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 16</value>
+  </data>
+  <data name="lblDescription.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="lblDescription.Text" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="&gt;&gt;lblDescription.Name" xml:space="preserve">
+    <value>lblDescription</value>
+  </data>
+  <data name="&gt;&gt;lblDescription.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblDescription.Parent" xml:space="preserve">
+    <value>gbxDetails</value>
+  </data>
+  <data name="&gt;&gt;lblDescription.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tbOrder.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="tbOrder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>128, 134</value>
+  </data>
+  <data name="tbOrder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>264, 20</value>
+  </data>
+  <data name="tbOrder.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;tbOrder.Name" xml:space="preserve">
+    <value>tbOrder</value>
+  </data>
+  <data name="&gt;&gt;tbOrder.Type" xml:space="preserve">
+    <value>OpenCBS.GUI.UserControl.TextNumericUserControl, OpenCBS.GUI, Version=14.8.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tbOrder.Parent" xml:space="preserve">
+    <value>gbxDetails</value>
+  </data>
+  <data name="&gt;&gt;tbOrder.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblOrder.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblOrder.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="lblOrder.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblOrder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 138</value>
+  </data>
+  <data name="lblOrder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 16</value>
+  </data>
+  <data name="lblOrder.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lblOrder.Text" xml:space="preserve">
+    <value>Order</value>
+  </data>
+  <data name="&gt;&gt;lblOrder.Name" xml:space="preserve">
+    <value>lblOrder</value>
+  </data>
+  <data name="&gt;&gt;lblOrder.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblOrder.Parent" xml:space="preserve">
+    <value>gbxDetails</value>
+  </data>
+  <data name="&gt;&gt;lblOrder.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="cmbEventAttribute.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="cmbEventAttribute.Location" type="System.Drawing.Point, System.Drawing">
+    <value>128, 40</value>
+  </data>
+  <data name="cmbEventAttribute.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 21</value>
+  </data>
+  <data name="cmbEventAttribute.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;cmbEventAttribute.Name" xml:space="preserve">
+    <value>cmbEventAttribute</value>
+  </data>
+  <data name="&gt;&gt;cmbEventAttribute.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbEventAttribute.Parent" xml:space="preserve">
+    <value>gbxDetails</value>
+  </data>
+  <data name="&gt;&gt;cmbEventAttribute.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lbEventAttribute.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbEventAttribute.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="lbEventAttribute.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbEventAttribute.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 43</value>
+  </data>
+  <data name="lbEventAttribute.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 16</value>
+  </data>
+  <data name="lbEventAttribute.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lbEventAttribute.Text" xml:space="preserve">
+    <value>Event attribute</value>
+  </data>
+  <data name="&gt;&gt;lbEventAttribute.Name" xml:space="preserve">
+    <value>lbEventAttribute</value>
+  </data>
+  <data name="&gt;&gt;lbEventAttribute.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbEventAttribute.Parent" xml:space="preserve">
+    <value>gbxDetails</value>
+  </data>
+  <data name="&gt;&gt;lbEventAttribute.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="cmbEventCode.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="cmbEventCode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>128, 14</value>
+  </data>
+  <data name="cmbEventCode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 21</value>
+  </data>
+  <data name="cmbEventCode.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;cmbEventCode.Name" xml:space="preserve">
+    <value>cmbEventCode</value>
+  </data>
+  <data name="&gt;&gt;cmbEventCode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbEventCode.Parent" xml:space="preserve">
+    <value>gbxDetails</value>
+  </data>
+  <data name="&gt;&gt;cmbEventCode.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lbEventType.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbEventType.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="lbEventType.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbEventType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 16</value>
+  </data>
+  <data name="lbEventType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 16</value>
+  </data>
+  <data name="lbEventType.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lbEventType.Text" xml:space="preserve">
+    <value>Event type</value>
+  </data>
+  <data name="&gt;&gt;lbEventType.Name" xml:space="preserve">
+    <value>lbEventType</value>
+  </data>
+  <data name="&gt;&gt;lbEventType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbEventType.Parent" xml:space="preserve">
+    <value>gbxDetails</value>
+  </data>
+  <data name="&gt;&gt;lbEventType.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="gbxCriterias.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="lbCurrency.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbCurrency.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="lbCurrency.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbCurrency.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 28</value>
+  </data>
+  <data name="lbCurrency.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 16</value>
+  </data>
+  <data name="lbCurrency.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lbCurrency.Text" xml:space="preserve">
+    <value>Currency</value>
+  </data>
+  <data name="&gt;&gt;lbCurrency.Name" xml:space="preserve">
+    <value>lbCurrency</value>
+  </data>
+  <data name="&gt;&gt;lbCurrency.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbCurrency.Parent" xml:space="preserve">
+    <value>gbxCriterias</value>
+  </data>
+  <data name="&gt;&gt;lbCurrency.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cmbCurrency.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="cmbCurrency.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 24</value>
+  </data>
+  <data name="cmbCurrency.Size" type="System.Drawing.Size, System.Drawing">
+    <value>251, 21</value>
+  </data>
+  <data name="cmbCurrency.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;cmbCurrency.Name" xml:space="preserve">
+    <value>cmbCurrency</value>
+  </data>
+  <data name="&gt;&gt;cmbCurrency.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbCurrency.Parent" xml:space="preserve">
+    <value>gbxCriterias</value>
+  </data>
+  <data name="&gt;&gt;cmbCurrency.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lbProductDescription.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt, style=Italic</value>
+  </data>
+  <data name="lbProductDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 114</value>
+  </data>
+  <data name="lbProductDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>374, 16</value>
+  </data>
+  <data name="lbProductDescription.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbProductDescription.Text" xml:space="preserve">
+    <value>Active only for product of type Loan, Guarantee or Savings</value>
+  </data>
+  <data name="lbProductDescription.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lbProductDescription.Name" xml:space="preserve">
+    <value>lbProductDescription</value>
+  </data>
+  <data name="&gt;&gt;lbProductDescription.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbProductDescription.Parent" xml:space="preserve">
+    <value>gbxCriterias</value>
+  </data>
+  <data name="&gt;&gt;lbProductDescription.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lbEconomicActivity.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbEconomicActivity.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="lbEconomicActivity.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 176</value>
+  </data>
+  <data name="lbEconomicActivity.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 16</value>
+  </data>
+  <data name="lbEconomicActivity.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbEconomicActivity.Text" xml:space="preserve">
+    <value>Economic activity</value>
+  </data>
+  <data name="&gt;&gt;lbEconomicActivity.Name" xml:space="preserve">
+    <value>lbEconomicActivity</value>
+  </data>
+  <data name="&gt;&gt;lbEconomicActivity.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbEconomicActivity.Parent" xml:space="preserve">
+    <value>gbxCriterias</value>
+  </data>
+  <data name="&gt;&gt;lbEconomicActivity.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lbClientType.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbClientType.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="lbClientType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 146</value>
+  </data>
+  <data name="lbClientType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 16</value>
+  </data>
+  <data name="lbClientType.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbClientType.Text" xml:space="preserve">
+    <value>Client type</value>
+  </data>
+  <data name="&gt;&gt;lbClientType.Name" xml:space="preserve">
+    <value>lbClientType</value>
+  </data>
+  <data name="&gt;&gt;lbClientType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbClientType.Parent" xml:space="preserve">
+    <value>gbxCriterias</value>
+  </data>
+  <data name="&gt;&gt;lbClientType.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="cmbEconomicActivity.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="cmbEconomicActivity.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 172</value>
+  </data>
+  <data name="cmbEconomicActivity.Size" type="System.Drawing.Size, System.Drawing">
+    <value>251, 21</value>
+  </data>
+  <data name="cmbEconomicActivity.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cmbEconomicActivity.Name" xml:space="preserve">
+    <value>cmbEconomicActivity</value>
+  </data>
+  <data name="&gt;&gt;cmbEconomicActivity.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbEconomicActivity.Parent" xml:space="preserve">
+    <value>gbxCriterias</value>
+  </data>
+  <data name="&gt;&gt;cmbEconomicActivity.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lbProduct.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbProduct.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="lbProduct.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 91</value>
+  </data>
+  <data name="lbProduct.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 16</value>
+  </data>
+  <data name="lbProduct.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbProduct.Text" xml:space="preserve">
+    <value>Product</value>
+  </data>
+  <data name="&gt;&gt;lbProduct.Name" xml:space="preserve">
+    <value>lbProduct</value>
+  </data>
+  <data name="&gt;&gt;lbProduct.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbProduct.Parent" xml:space="preserve">
+    <value>gbxCriterias</value>
+  </data>
+  <data name="&gt;&gt;lbProduct.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="cmbClientType.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="cmbClientType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 142</value>
+  </data>
+  <data name="cmbClientType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>251, 21</value>
+  </data>
+  <data name="cmbClientType.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cmbClientType.Name" xml:space="preserve">
+    <value>cmbClientType</value>
+  </data>
+  <data name="&gt;&gt;cmbClientType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbClientType.Parent" xml:space="preserve">
+    <value>gbxCriterias</value>
+  </data>
+  <data name="&gt;&gt;cmbClientType.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="cmbProduct.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="cmbProduct.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 87</value>
+  </data>
+  <data name="cmbProduct.Size" type="System.Drawing.Size, System.Drawing">
+    <value>251, 21</value>
+  </data>
+  <data name="cmbProduct.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cmbProduct.Name" xml:space="preserve">
+    <value>cmbProduct</value>
+  </data>
+  <data name="&gt;&gt;cmbProduct.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbProduct.Parent" xml:space="preserve">
+    <value>gbxCriterias</value>
+  </data>
+  <data name="&gt;&gt;cmbProduct.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="lbProductType.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbProductType.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="lbProductType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 61</value>
+  </data>
+  <data name="lbProductType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 16</value>
+  </data>
+  <data name="lbProductType.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbProductType.Text" xml:space="preserve">
+    <value>Product type</value>
+  </data>
+  <data name="&gt;&gt;lbProductType.Name" xml:space="preserve">
+    <value>lbProductType</value>
+  </data>
+  <data name="&gt;&gt;lbProductType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbProductType.Parent" xml:space="preserve">
+    <value>gbxCriterias</value>
+  </data>
+  <data name="&gt;&gt;lbProductType.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="cmbProductType.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="cmbProductType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 57</value>
+  </data>
+  <data name="cmbProductType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>251, 21</value>
+  </data>
+  <data name="cmbProductType.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cmbProductType.Name" xml:space="preserve">
+    <value>cmbProductType</value>
+  </data>
+  <data name="&gt;&gt;cmbProductType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbProductType.Parent" xml:space="preserve">
+    <value>gbxCriterias</value>
+  </data>
+  <data name="&gt;&gt;cmbProductType.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="gbxCriterias.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="gbxCriterias.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 210</value>
+  </data>
+  <data name="gbxCriterias.Size" type="System.Drawing.Size, System.Drawing">
+    <value>389, 261</value>
+  </data>
+  <data name="gbxCriterias.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="gbxCriterias.Text" xml:space="preserve">
+    <value>Criteria</value>
+  </data>
+  <data name="&gt;&gt;gbxCriterias.Name" xml:space="preserve">
+    <value>gbxCriterias</value>
+  </data>
+  <data name="&gt;&gt;gbxCriterias.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbxCriterias.Parent" xml:space="preserve">
+    <value>gbxDetails</value>
+  </data>
+  <data name="&gt;&gt;gbxCriterias.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="cbmEntryDirection.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="cbmEntryDirection.Location" type="System.Drawing.Point, System.Drawing">
+    <value>128, 188</value>
+  </data>
+  <data name="cbmEntryDirection.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 21</value>
+  </data>
+  <data name="cbmEntryDirection.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="cbmEntryDirection.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;cbmEntryDirection.Name" xml:space="preserve">
+    <value>cbmEntryDirection</value>
+  </data>
+  <data name="&gt;&gt;cbmEntryDirection.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbmEntryDirection.Parent" xml:space="preserve">
+    <value>gbxDetails</value>
+  </data>
+  <data name="&gt;&gt;cbmEntryDirection.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="cmbCreditAccount.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="cmbCreditAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>128, 106</value>
+  </data>
+  <data name="cmbCreditAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 21</value>
+  </data>
+  <data name="cmbCreditAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cmbCreditAccount.Name" xml:space="preserve">
+    <value>cmbCreditAccount</value>
+  </data>
+  <data name="&gt;&gt;cmbCreditAccount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbCreditAccount.Parent" xml:space="preserve">
+    <value>gbxDetails</value>
+  </data>
+  <data name="&gt;&gt;cmbCreditAccount.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="cmbDebitAccount.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="cmbDebitAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>128, 79</value>
+  </data>
+  <data name="cmbDebitAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 21</value>
+  </data>
+  <data name="cmbDebitAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cmbDebitAccount.Name" xml:space="preserve">
+    <value>cmbDebitAccount</value>
+  </data>
+  <data name="&gt;&gt;cmbDebitAccount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbDebitAccount.Parent" xml:space="preserve">
+    <value>gbxDetails</value>
+  </data>
+  <data name="&gt;&gt;cmbDebitAccount.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="lbEntryDirection.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbEntryDirection.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="lbEntryDirection.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbEntryDirection.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 191</value>
+  </data>
+  <data name="lbEntryDirection.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 16</value>
+  </data>
+  <data name="lbEntryDirection.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbEntryDirection.Text" xml:space="preserve">
+    <value>Entry direction</value>
+  </data>
+  <data name="lbEntryDirection.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;lbEntryDirection.Name" xml:space="preserve">
+    <value>lbEntryDirection</value>
+  </data>
+  <data name="&gt;&gt;lbEntryDirection.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbEntryDirection.Parent" xml:space="preserve">
+    <value>gbxDetails</value>
+  </data>
+  <data name="&gt;&gt;lbEntryDirection.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="lbCreditAccount.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbCreditAccount.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="lbCreditAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 109</value>
+  </data>
+  <data name="lbCreditAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 16</value>
+  </data>
+  <data name="lbCreditAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbCreditAccount.Text" xml:space="preserve">
+    <value>Credit account</value>
+  </data>
+  <data name="&gt;&gt;lbCreditAccount.Name" xml:space="preserve">
+    <value>lbCreditAccount</value>
+  </data>
+  <data name="&gt;&gt;lbCreditAccount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbCreditAccount.Parent" xml:space="preserve">
+    <value>gbxDetails</value>
+  </data>
+  <data name="&gt;&gt;lbCreditAccount.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="lbDebitAccount.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbDebitAccount.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="lbDebitAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 81</value>
+  </data>
+  <data name="lbDebitAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 16</value>
+  </data>
+  <data name="lbDebitAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbDebitAccount.Text" xml:space="preserve">
+    <value>Debit account</value>
+  </data>
+  <data name="&gt;&gt;lbDebitAccount.Name" xml:space="preserve">
+    <value>lbDebitAccount</value>
+  </data>
+  <data name="&gt;&gt;lbDebitAccount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbDebitAccount.Parent" xml:space="preserve">
+    <value>gbxDetails</value>
+  </data>
+  <data name="&gt;&gt;lbDebitAccount.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="gbxDetails.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="gbxDetails.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial Narrow, 9pt</value>
+  </data>
+  <data name="gbxDetails.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="gbxDetails.Size" type="System.Drawing.Size, System.Drawing">
+    <value>404, 477</value>
+  </data>
+  <data name="gbxDetails.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;gbxDetails.Name" xml:space="preserve">
+    <value>gbxDetails</value>
+  </data>
+  <data name="&gt;&gt;gbxDetails.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbxDetails.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;gbxDetails.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tableLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>410, 546</value>
+  </data>
+  <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.Name" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="gbxButtons" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="gbxDetails" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Percent,88,57143,Percent,11,42857" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>410, 546</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAYAAAAAAAEAIADaBwAAZgAAABAQAAABACAAaAQAAEAIAAAgIAAAAQAgAKgQAACoDAAAMDAAAAEA
+        IACoJQAAUB0AAEBAAAABACAAKEIAAPhCAAAAAAAAAQAgABUGAAAghQAAiVBORw0KGgoAAAANSUhEUgAA
+        AIAAAACACAMAAAD04JH5AAAB/lBMVEUel84el84el84el84el84el84el84el84el84el84el84el84e
+        l84el84el84el84el84el84el84el84el84el84el84el84el84el84el84el84el84el84el84el84y
+        oNKKyeW84PDZ7ffL5/Ss2e1muN4gmM4pnNCSzef3+/3////V6/ZBp9YsntFDqNZ0v+Hp9frw+PxFqdYi
+        mc98wuLt9/vc7/dWsdrU6/Ykms9etNza7veDxuQ+ptW43u+IyOW/4vHz+fwxoNKa0On6/f70+v02otMw
+        n9Kh1Ov7/f6n1uyw2u4jmc/x+Pz9/v9MrNj+//9UsNpluN7f8PjO6PQfl84hmM9Jq9fH5fNyvuB7wuI0
+        odOp1+zq9foqndHu9/svn9Imm9CLyeai1Ottu9/l8/n8/v5Iq9dPrtnB4vLJ5vM4o9Sw2+5luN1tvN/i
+        8vklmtDn9PpuvN+MyuZRr9mVzuj4/P1wveCZ0Ok/ptX5/P6f0+qDxeREqdb2+/1CqNbs9vtHqter2O1q
+        ut/N6PS/4fFTr9ozodOYz+mSzOfF5PIrndHD4/LR6vVxveC03O92wOE3otOe0urG5PPo9Ppput4nm9CR
+        zOex2+47pNS43vBctNs1otN4weLY7fdXstp9w+N/xONAptVhtt3r9vsom9B5weLX7fbO6fQr0xbdAAAA
+        H3RSTlMAHYzW9ZAeXPZmZGcc+CWT19v6+dSIjvdb/mFg+4ogJlSy2AAAAAFiS0dEKyS55AgAAAAJcEhZ
+        cwAAAEgAAABIAEbJaz4AAATDSURBVHja7Zv3VxNBEMdPQOy918UKEghGsCIqCKgRBNQEBTEWilEsERQ7
+        9t67Yu/+l4Yk7s3ebZkNT+753n5/ZWfmE2b25ntKLMuyhmRkZpFBV1bm0GwroWHDB796UsNH9Ncf6VX5
+        fo2yrNGeff5+jRlrZXhZn5Bx1nhvASZYE70FmGR5W58QA2AADIABMAAGwAAYAANgAAzAfwKQM2/+goWL
+        Fud6BJC3JN+XUEGhbnp/0cABcpcGfH+1rFirfMnyFStLBgqwarUPaMEajfqla+MRZQMDWLfex2oDunxR
+        eSKgYuMAAPyVVY76vupNuPKbtwRTEVvTBoh30OdWDaZ8bdk2GlBXnyZAooNuNWxX19+xE0aEwukApDrI
+        UUGjovyu3Y6IJn0Au4McNUvL72mpcwbsjWgCwA5ytG+/ON2Bg9WciEo9ALaDHLWKkoXb2rkBwUINAFcH
+        3eo4xM8VDYkiDqMBOB3k6AhvrjuPNogjjuEA+B3k6LgrD11YfJ2IIQBEHeToZJ6j+V0BRUS3GuBUCFU7
+        qdPI5lNVRBQArq0jV08OsvlUZ+QATVWIHLZCUWzzqc7KAc6d1yjf3kZvAXQrcl1QtOA0unz1wQM0mnUr
+        Ul1UAOSdxOWpa9lDY7Xm5pLqFhxHpdm9i0Zy3IosUHkNw0fUWXbuoHF8tyJU72UlADnUoUiyrayWHha4
+        FZGuiF0MeBK2SnMEt2ymJ8Vuhau6FokxBQD790mSlBfRc1K3whGYGzkAaRbmWFtKDynciktgbpQAjQX8
+        HIFm+/VG6VZYwblRA5Ao76Gev8RefQi3AgXnhpDI1UsxBQC55srRcLST/hTnVmyBuSHh6zfiny5485Yc
+        4HaFIwfYOjGsW0kJzA1Y2A13wjIAcpHJAbaObvNXLAevxczCvisFaLxnn4RbR7P5VZV+O6djYXdEZQDk
+        /oPUObh1dJu/fp2d0L2wH+bKAEj40cP4ofzHtvVGW9WUVq8C6XgL+4kUIC5/8VMbUsOqJhRYCj4gf2Ff
+        8SsAoBB+k21+BHwQ0cJ+hgbA+U1+8yULO1iMA8D6TW7zpQv7OQqg9IVWeab5qoX9EgHQpTIojODGQCzs
+        9ldKgMs9GuXhxsAt7NdKgDca9UPw4YZ7Zve8VQDE8L8AuDFIFPvM7lMAXMWWhxtD69q+kwNEcVngxtC8
+        tql/RRYBvEclgX4T/5qYVKBYPoQI48/6zcVa5em1FQJ8UKVw+s2wxtYA11YIUPJRmoL1mwnVo00DvLbi
+        J+EnWQroN6m24soz11a2Cx4LUzB+09ZGzCsLc23lAJ29guZ/Fv03zBdleebaqgBIN7L52LnhvibKAGIn
+        kM3HzY1vJe81UeqIjiGbb0s8N+ybAhKAHMakgBLNDfumgAcoDCJSMOrm14dmUQeAVCJSMOLNDWsW9QAi
+        e9UpWLnmhjWLugCkSZ3CIXZuWLOYBkB8xahSOPQVziFjFtMCIPU1qhROddlLKRRVnv4Xf8Dw7XuyPLt1
+        BhGA/PjZ9+t3TVMMc/Y/+RMOA2AADIABMAAGwAAYAANgAAzAvwQY4239SdZkbwHGW1O8BZhqZXvwtXNb
+        04ZY1vQZHgLM7P/y+Uzvvvw+K/n1++yMzNmDXz1r8py58eJ/AMA32oYZNf8ZAAAAJXRFWHRkYXRlOmNy
+        ZWF0ZQAyMDE0LTA1LTA2VDEyOjE2OjU0KzA4OjAwAxvRswAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNC0w
+        NS0wNlQxMjoxNjo1NCswODowMHJGaQ8AAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8
+        AAAAAElFTkSuQmCCKAAAABAAAAAgAAAAAQAgAAAAAAAABAAAEQsAABELAAAAAAAAAAAAAM6XHkrOlx7n
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce6c6XHk/Olx7m
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7n
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/PmiT/z5ok/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Uozj/7dms/9SjOP/Olx7/zpce/86XHv/PmiT/9+3Z//r16f/hv3T/
+        zpgg/86XHv/Olx7/zpce/86XHv/Olx7/79y0///////9+/f/582S/9CcKf/Olx7/5ciI////////////
+        //////br1P/asVb/zpce/86XHv/Olx7/zpce//z58//////////////////69en/4b90/9y0Xf/37tr/
+        /////////////////vz5/9OhNP/Olx7/zpgg/964Zv/asFX/8eK////////////////////////269T/
+        27Na/+LCfP/79+3//////+jOlf/Olx7/zpce/+PEf////////Pjx/+TGg//dt2P/9+7a////////////
+        ///////////v3rj/2KxM/966af/PmiT/zpce/9GdKv/8+fL/////////////////+PDf/965Z//iwnz/
+        +/ft//////////////////z58//PmSP/zpce/86XHv/Olx7/2a5P//Tozv/////////////////p0Jr/
+        zpce/9GeLP/p0Jr//v36///////y5MX/zpce/86XHv/Olx7/zpce/86XHv/Olx//37tt//nz5f/58+X/
+        0Z0q/86XHv/Olx7/zpce/9WmPv/v3bb/1qlF/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/PmSL/
+        0Jol/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce5s6XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce586XHknOlx7m
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce5s6XHk8AAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        KAAAACAAAABAAAAAAQAgAAAAAAAAEAAAEQsAABELAAAAAAAAAAAAAM6XHgbOlx6Rzpce8c6XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce8c6XHpHOlx4Gzpcekc6XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHpDOlx7m
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce5c6XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        1KM4/9SjOP/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/z5ok/+fMkv/SnzD/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/+LBev////7///79/+zXqf/ToTT/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/lyIj///////z48f/kxoP/z5kj/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Tojb//fr0//////////////////369P/myYv/0Jsm/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/06I2//369P/////////////////48N//3rhl/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/+7asP/////////////////////////////////58+X/37tt/86XH//Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/u2q//////////////////////////////////
+        8+XH/9erSf/Olx7/zpce/86XHv/asFT////+////////////////////////////////////////////
+        9OjO/9muT//Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/z5ok//7+/P//////////////////////
+        //////////////////79/+zXqf/ToTT/zpce/9qvU//37tr/////////////////////////////////
+        ///////////////////+/9+7bP/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/9uvU////////////
+        //////////////////////////////////////369P/myYv/0Jsm/8+ZIv/iwnz/+/ft////////////
+        ///////////////////////////69Of/0Jwp/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Rni7/
+        69Sh//79+//////////////////////////////////////////////////58+X/37tt/86XH//Rniz/
+        6dCa//79+v///////////////////////////9+8bf/Olx7/zpce/86XHv/Olx7/zpce/9CcKf/r1aP/
+        8eG//9+7bf/Olx//1qhD//Hiv///////////////////////////////////////////////////////
+        9OjO/9muT//Olx7/1aY+/+/euP/////////////////z5sn/zpcf/86XHv/Olx7/zpce/86XHv/Olx7/
+        69Si//////////////////Tozv/Zrk//zpce/9y0Xv/37tr/////////////////////////////////
+        ///////////////////+/+7bsP/Uozj/zpce/9qxVv/x4L3/8N64/9SjOP/Olx7/zpce/86XHv/Olx7/
+        zpce/9erSP/+/vz//////////////////////////v/u27D/1KM4/8+ZIv/iwnz/+/ft////////////
+        //////////////////////////////////////379//nzZL/0Jso/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx//8+bJ///////////////////////////////////////9+/f/582S/9CcKf/Rniz/
+        6tOg//79+//////////////////////////////////////////////////06M7/zpgg/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/9erSP/+/fr/////////////////////////////////////////////////
+        +vXp/9+7bP/Olx7/1qhD//Hiv//////////////////////////////////////////////////Tojb/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/9WmPv/v3rj/////////////////////////////////
+        ////////////////4sJ7/86XHv/Olx7/zpce/9y0Xv/37tr/////////////////////////////////
+        9OjN/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/asVb/9uvU////////////
+        //////////////////////br1f/PmCH/zpce/86XHv/Olx7/zpce/8+ZIv/iwnz/+/ft////////////
+        ///////+/f/YrEz/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/OmCD/
+        4b90//r16f////////////////////7/2rBU/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Rniz/
+        6dCa//79+v//////7Nan/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/0Jwp/+fNkv/9+/f//////+rToP/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/1aY+/+7ar//SoDH/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/9KfMP/Vp0D/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7wzpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce7c6XHpDOlx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx6QzpceBs6XHpHOlx7v
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7vzpcekc6XHgYAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAACgAAAAwAAAAYAAAAAEAIAAAAAAAACQAABELAAARCwAAAAAAAAAAAADOlx4azpceuc6XHvvOlx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx77zpceuc6XHhrOlx63
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHrbOlx72zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHvXOlx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        z5ki/9qxVv/asFT/z5gh/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/fvG3/
+        0Jwp/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/SnzD/9+3Z////////////9+7a/9y0Xv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/9qyV///////+vXp/+G/dP/OmCD/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/u2rD////////////////////////////x4r//1qhD/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/z5ki//ft2P/////////////////269T/2rFW/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/9qwVP////7/////////////////////////////////
+        /v37/+vUof/SnzD/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/48R//////////////////////////////////+/euP/Vpj7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/z5gh//br1f//////////////////////
+        ///////////////////////////8+PH/5MaD/8+ZI//Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/SoDH//Pjx////////////////////////////
+        ///////////+/fr/6dCa/9GeLP/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/4sJ7////////////
+        //////////////////////////////////////////////////////jw3//euGX/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/r1aX/////////////////
+        //////////////////////////////////////v37f/iwnz/z5ki/86XHv/Olx7/zpce/86XHv/Sny//
+        +/fu////////////////////////////////////////////////////////////////////////////
+        8+XH/9erSf/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/8+aJP/+/fr/
+        ////////////////////////////////////////////////////////////////9+7a/9y0Xv/Olx7/
+        zpce/86XHv/XqUb/9+7a////////////////////////////////////////////////////////////
+        ///////////////////////+/f/ozpT/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/9CbJv/+/fv/////////////////////////////////////////////////////////////////
+        ///////////x4r//1qhD/86XHv/Olx7/z5ki/+LCfP/79+3/////////////////////////////////
+        ///////////////////////////////////////////fvG3/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/r1aT/////////////////////////////////////////////////
+        /////////////////////////////////v37/+vUof/SnzD/zpce/86XHv/Rniz/6dCa//79+v//////
+        //////////////////////////////////////////////////////Pmyf/Olx//zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/PmCH/5MWD//z48f//////////////////////
+        ///////////////////////////////////////////////////////////8+PH/5MaD/8+ZI//Olx7/
+        zpce/9WmPv/v3rj//////////////////////////////////////////////////v78/9erSP/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx//1adA/9KgMf/Olx7/zpce/9KgMf/s16n/
+        //79////////////////////////////////////////////////////////////////////////////
+        //////jw3//euGX/zpce/86XHv/Olx7/2rFW//br1P//////////////////////////////////////
+        69Si/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/9OiN//27df///////7+/P/u2rD/
+        1KM4/86XHv/Olx7/16tJ//Plx///////////////////////////////////////////////////////
+        ////////////////////////////////8+XH/9erSf/Olx7/zpce/86YIP/hv3T/+vTo////////////
+        ///////////79+7/0p8v/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce//Liwf//////
+        /////////////////fv3/+fNkv/QnCn/zpce/86XHv/euGX/+PDf////////////////////////////
+        ///////////////////////////////////////////////////////+/f/s16n/0p8w/86XHv/Olx7/
+        0Jsm/+bJi//9+vT///////v37v/bsln/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        3bhl///////////////////////////////////////69en/4b90/86YIP/Olx7/z5kj/+TGg//8+PH/
+        ////////////////////////////////////////////////////////////////////////////////
+        /Pjx/+TGg//PmSP/zpce/86XHv/Qmyj/1qlE/9CbJv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/QmiX/+fLi//////////////////////////////////////////////////br1P/asVb/
+        zpce/86XHv/SnzD/69Sh//79+///////////////////////////////////////////////////////
+        ///////////////////////////48N//3rhl/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/myoz/////////////////////////////////////////////////
+        ////////////////7964/9WmPv/Olx7/zpce/9aoQ//x4r//////////////////////////////////
+        /////////////////////////////////////////////////////+nRnP/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/9SjOP/9+/b/////////////////////////////////
+        //////////////////////////////////////79+v/p0Jr/0Z4s/86XHv/Olx7/3LRe//fu2v//////
+        /////////////////////////////////////////////////////////////////////////v/TojX/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/924Zf/9+vT/////////////////
+        ////////////////////////////////////////////////////////////////+/ft/966af/Olx7/
+        zpce/8+ZIv/iwnz/+/ft////////////////////////////////////////////////////////////
+        ///////////Wp0H/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/ToTT/
+        7Nep///+/f//////////////////////////////////////////////////////////////////////
+        /////9qyV//Olx7/zpce/86XHv/Olx7/0Z4s/+nQmv/+/fr/////////////////////////////////
+        //////////////////////bs1v/Olx//zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/9erSf/z5cf/////////////////////////////////////////////////
+        ////////////////79y0/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Vpj7/7964////////////
+        /////////////////////////////////////9qyV//Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/3rhl//jw3///////////////////////
+        ///////////////////////////9+/b/1KM4/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/9qxVv/269T/////////////////////////////////79y0/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/8+ZI//kxoP/
+        /Pjx///////////////////////////////////////myoz/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/OmCD/4b90//r16f/////////////////9+/b/1KM4/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/0p8w/+vUof/+/fv///////////////////////ny4v/QmiX/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/9CcKf/nzZL//fv3///////myoz/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/WqEP/8eK//////////////Pjx/9mvUf/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        1KM4/+rTn//QmiX/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/9apRf/ctV//
+        0Z0r/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx72zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHvXOlx6z
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHrfOlx4Zzpcets6XHvvOlx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx77zpceuM6XHhoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAAAAQAAAAIAAAAABACAA
+        AAAAAABAAAARCwAAEQsAAAAAAAAAAAAAzpceAM6XHlzOlx7Xzpce/c6XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/c6XHtfOlx5azpceAM6XHlzOlx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHlrOlx7W
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7Vzpce/M6XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce+86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/06I1/+C9b//fvG3/0qAx/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/YrEz/z5kj/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/4sF5//79+/////////////379//nzZL/0Jwp/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/ToTP/
+        /Pnz//jw3//euGX/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/2q9T//7+/P//////////////////////
+        //////r16f/hv3T/zpgg/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/7dir//////////////////Plx//Xq0n/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/z5gh//br1f//////
+        //////////////////////////////////////br1P/asVb/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/2a5P/////v////////////////////////79/+zXqf/ToTT/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/+LCe////////////////////////////////////////////////////////////+/euP/Vpj7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpgg//Xq0f//////////////////////
+        /////////////////fr0/+bJi//Qmyb/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/9KfL//79+7/////////////////////////////////////////////////
+        /////////////////v36/+nQmv/Rniz/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/+HAdv//////
+        ////////////////////////////////////////////////+fPl/9+7bf/Olx//zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/r1KL/////////////////////////////////
+        ////////////////////////////////////////////////+/ft/+LCfP/PmSP/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/9GeLP/79uz/////////////////////////////////////////////////////////////////
+        9OjO/9muT//Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Xq0j//v78////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        +PDf/964Zf/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/p0Zr/////////////////////////////////////////////////
+        //////////////////////////////7/7tuw/9SjOP/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx//
+        8+bJ////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////8+XH/9erSf/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/PmSL//fr0////////////////////////////
+        ///////////////////////////////////////////////////////////9+/f/582S/9CcKf/Olx7/
+        zpce/86XHv/Olx7/0qAx//br1P//////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////v3/7Nep/9CbJ//Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/0qAy////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///////////69en/4b90/86YIP/Olx7/zpce/86XHv/OmCD/4b90//r16f//////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        //////Pmyf/Olx//zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86YIP/69en/////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////269T/2rFW/86XHv/Olx7/zpce/86XHv/QnCn/
+        582S//379///////////////////////////////////////////////////////////////////////
+        //////////////////////7+/P/Xq0j/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/4L1x/////v//////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////////v3rj/
+        1aY+/86XHv/Olx7/zpce/86XHv/Uozj/7tuw/////v//////////////////////////////////////
+        ///////////////////////////////////////////r1KL/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/dt2P/+fPl////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        //////////////////////79+v/p0Jr/0Z4s/86XHv/Olx7/zpce/86XHv/Zrk//9OjO////////////
+        ///////////////////////////////////////////////////////////79+7/0p8v/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/9CbJv/myYv//fr0////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////v37f/iwnz/z5ki/86XHv/Olx7/
+        zpce/86XH//fu23/+fPl////////////////////////////////////////////////////////////
+        4sJ7/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/SoDH/
+        5MWC/+rSnf/hwHb/0Jwp/86XHv/Olx7/zpce/9OhNP/s16n///79////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        //////fu2v/bsln/zpce/86XHv/Olx7/zpce/9CbJv/myYv//fr0////////////////////////////
+        ////////////////9uvV/8+YIf/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Yq0r/+/ft//////////////////r16f/hv3T/zpgg/86XHv/Olx7/zpce/9erSf/z5cf/
+        ////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////+/euP/Vpj7/zpce/86XHv/Olx7/zpce/9OhNP/s16n/
+        //79///////////////////////////////+/9qwVP/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/PmiT/+PDe//////////////////////////////////br1P/asVb/
+        zpce/86XHv/Olx7/zpce/964Zf/48N//////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////v36/+nQmv/Rniz/
+        zpce/86XHv/Olx7/zpce/9erSf/z5cf////////////////////+/+XJiv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/5ciI////////////////////////////
+        /////////////////////+/euP/Vpj7/zpce/86XHv/Olx7/z5kj/+TGg//8+PH/////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////+/ft/+LCfP/PmSL/zpce/86XHv/Olx7/zpce/9uzWv/p0Jr/6M6V/9itTf/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/06I2//369P//////
+        /////////////////////////////////////////////////v36/+nQmv/Rniz/zpce/86XHv/Olx7/
+        0p8w/+vUof/+/fv/////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////9+7a/9y0Xv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/+7asP//////////////////////////////////////////////////////////////////////
+        +/ft/+LCfP/PmSL/zpce/86XHv/Olx7/1qhD//Hiv///////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        8eK//9aoQv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/9qwVP////7/////////////////////////////////////////////////
+        ////////////////////////////////9+7a/9y0Xv/Olx7/zpce/86XHv/Olx7/3LRe//fu2v//////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////+/Pn/3rhm/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/8+YIf/269X/////////////////////////////////
+        ////////////////////////////////////////////////////////////////8eK//9aoQ//Olx7/
+        zpce/86XHv/PmSL/4sJ8//v37f//////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////z47//Qmyb/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/iwnv/////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///////////+/fv/69Sh/9KfMP/Olx7/zpce/86XHv/Rniz/6dCa//79+v//////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        2rBU/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        4L5y//v37f//////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////8+PH/3bdk/86XHv/Olx7/zpce/86XHv/Vpj7/
+        7964////////////////////////////////////////////////////////////////////////////
+        /////////////////////9isTP/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Rniz/6dCa//79+v//////////////////////////////////////
+        /////////////////////////////////////////////////////////////////vz5/9WmP//Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/asVb/9uvU////////////////////////////////////////////
+        //////////////////////////////////////jv3f/OmCD/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Vpj7/7964////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /////+jOlf/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86YIP/hv3X/+/ft////////////
+        ///////////////////////////////////////////////////////////ctmD/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/asVb/9uvU////////////////////////////////////////////////////////////
+        //////////////////////r05//QnCn/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/9GeLP/p0Jr//v36///////////////////////////////////////////////////////x4L3/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86YIP/hv3T/+vXp////////////////////////////
+        ///////////////////////////////////////////fvG3/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/9WmPv/v3rj/////////////////////////////////
+        ///////////+/Pn/1aY//86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/9CcKf/nzZL/
+        /fv3///////////////////////////////////////////////////////z5sn/zpcf/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/9qxVv/269T/
+        ////////////////////////////////6M6V/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/9SjOP/u27D////+///////////////////////////////////////+/fv/
+        16pH/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpgg/+G/dP/69en/////////////////+vTn/9CcKf/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/9muT//06M7/////////////////
+        ////////////////6dGc/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/0Jwp/+fNkv/9+/f//////9+8bf/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpcf/9+7bf/58+X/////////////////8eC9/9CaJf/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        1KM4/+bLjv/Olx//zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/z5ki/9y0Xv/hwHb/2a5P/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/c6XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce+86XHtnOlx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHtbOlx5d
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx5bzpceAM6XHlrOlx7Xzpce/c6XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/zpce/86XHv/Olx7/
+        zpce/86XHv/Olx7/zpce/c6XHtbOlx5ZzpceAIAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAB
+        iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAMAAADVRocKAAABrVBMVEUel84el84el84el84el84el84e
+        l84el84el84el84el84el84el84el84el84el84el84el84el84el85HqtePy+ep1+yWzuhWsdofl85D
+        qNa/4vH////L5/Q0odNluN0wn9Kh1Ov7/f7X7fYmm9CLyeb0+v34/P07pNQjmc+DxuTx+PyRzOdtu9/l
+        8/m13e9luN7f8PhPrtnO6PRXstpJq9fH5fO43vA4o9Sw2+7+///Y7fcimc/9/v9ctNuOy+b3+/1/xOPc
+        7/ckms8xoNKIyOWn1uw2otNMrNiw2u4pnNCSzedUsNogmM50v+Hp9fpyvuDV6/YhmM/U6/b6/f5Qrtk+
+        ptW43u8untEsntGa0Ol2wOF8wuLt9/tput7e8PhetNza7vdgttyg0+q94PE/ptX5/P5zvuCVzujn9PrC
+        4/JtvN9NrdhuvN9AptXJ5vNIq9eBxeS84PDs9vslmtBas9t1v+Fkt90rndGq2O3D4/Inm9CZ0Ol7wuLu
+        9/svn9Ka0emy3O6KyeXi8vlnud7G5PNFqdae0urR6vWQzOer2O1oud7w+PwtntEom9B2CTjvAAAAE3RS
+        TlMAO7Ptsjds/GU4ru7p/uyvsDk2wtU5PQAAAAFiS0dEHJwEQQcAAAAJcEhZcwAAAEgAAABIAEbJaz4A
+        AANbSURBVGje7ZrpUxNBEMVHEBFFREeRwBg5wx055IoBo4AKmICCIPflibfgiXgr3n+zCbs7u5t09yxl
+        zRfd9ymp9Ovf5s1OemorjLFdWdlci7J357Ck9uTqaZ9S7t7k9WvsnyTksSyd/Tnfx/brBeQzvf35Ad0A
+        7gN8gA/wAT7ABygBR44WHSsOaAOUlIqUjgc9tAme2DGgrLxCGKqsUrWvqg7V1O4MUFffIKQa6faBpnCy
+        6OSOAM0twiH06rbV2mZUnfIOaO8QbnXi7bu6I2bR6ahHQLCoR6SrFwv/TMwuOusJkFwvkalzfXj4Ug39
+        akCaxdYAEb7UeSUgwyIVuoCHL9VzkQYAFluDbtvQcAwoagsQANgiFbnkMMUTI3DVKApALVKXr0hP8RhW
+        FI4iANwiNX7VdExMElXFMOBaSNl/csKon5oep8pmkG8woGg/Zl5ZdHaOLpxHAH0LlGskETeKF5dUOfYj
+        AL6Mm2LDQ0aNOR8oreC36XXEEunuMgrs+UAsVB0OuHETtLS1Gh+75gOW5C1ousqNdhuwhJtMi3s+0Emi
+        O/lOuiVUbc7KklVle5kkDuB33ZaeoqD38K0keeBe4v4DBBB46LR0tHsPXybJFytT71e7QAB/ZF9pSzP3
+        HL5M0r6Pw/0ggD82P2+oN2+3jOGcKZmkK8onMIAn1lJXtFJmvIOGc7qsJNOjXIYBfP3ps+cvjJfwcHZL
+        JpkR5UIfDLBXHBvODskkoSgHaAA+nKUqys0k4SjlEIcAQy8jyv6vSjgd5SAO2FCPNxk+HqU1xAHAa+/h
+        U1GaQzwTEFVsXTt88pwjxCYCqKX7l1rhK845Qrx5CwMmKNPSolmlPucI8Q4GxNdQx9ysPPe8V7Yfn55C
+        FvkD7TDUq+pvnXMAwPpH0mGqk2w/Jk9g0Eb7RDqse6EGby/POQiAf6Yclhqx9u7pDAK+VBAOSxvwHk6f
+        zvCP3RbhkJqH+svpTAOm1nAHkaRjOisAfAZ3oEk6prMaEP+6Hf43+imCM0nHdPYC4K0R4jAFJGlPZ48A
+        /p0IX+qH9XNqT2fPgA1Pz4kS2+PsZ30dWvG3T7x+bZZvjf4mCv7xZ3Y+wAf4AB/gA/4fQIHe/vnsoF5A
+        ITuk968nh/X/eYaxvEJN61BQmMPYH4F4O84J9IxVAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE0LTA1LTA2
+        VDEyOjE2OjU0KzA4OjAwAxvRswAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNC0wNS0wNlQxMjoxNjo1NCsw
+        ODowMHJGaQ8AAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Accounting Rule</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FrmAddContractAccountingRule</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>OpenCBS.GUI.UserControl.SweetBaseForm, OpenCBS.GUI, Version=14.8.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+</root>

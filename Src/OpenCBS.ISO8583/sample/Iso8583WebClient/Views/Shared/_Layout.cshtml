@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>ISO 8583 Message Client</title>
+    
+    <style type="text/css">
+        body 
+        {
+            background-color: #f0f0f0;
+            color: Black;
+            font-family: Sans-Serif;
+            font-size: 8.25pt;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+        }
+        input, select, textarea, table
+        {
+            font-family: Sans-Serif;
+            font-size: 8.25pt;
+        }
+        div.margin
+        {
+            margin: 10px;
+        }
+        h3 
+        {
+            margin: 10px 0px 0px 0px;
+            font-size: large;
+        }
+        table 
+        {
+            border-style: none;
+            border-spacing: 0px;
+        }
+        td 
+        {
+            border-style: none;
+        }
+        table.layout 
+        {
+            height: 100%;
+            margin: 0px;
+            width: 100%;
+        }
+        table.layout td
+        {
+            padding: 0px;
+        }
+        table.fields
+        {
+            margin: 3px;
+        }
+        table.fields td
+        {
+            padding: 2px;
+            vertical-align: top;
+            white-space: nowrap;
+        }
+        table.sub-fields
+        {
+            display: inline-table;
+            margin: 0px;
+        }
+        table.sub-fields td
+        {
+            padding: 0px 4px 4px 0px;
+            vertical-align: top;
+            white-space: nowrap;
+        }
+    </style>
+        
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+</head>
+<body>
+<div class="margin">
+    @RenderBody()
+</div>
+</body>
+</html>

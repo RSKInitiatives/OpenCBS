@@ -1,0 +1,136 @@
+﻿using OpenCBS.CoreDomain;
+using OpenCBS.CoreDomain.Messaging;
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+
+namespace OpenCBS.Manager.Messaging
+{
+    public class QueuedSMSManager : Manager
+    {
+        private User user;
+
+        public QueuedSMSManager(User user) : base(user)
+        {
+            this.user = user;
+        }
+
+        public List<QueuedSMS> SelectAll()
+        {
+            List<QueuedSMS> qeuedSMSs = new List<QueuedSMS>();
+            const string q =
+                @"SELECT * FROM dbo.QueuedSMS where Deleted <> 1";
+            using (SqlConnection conn = GetConnection())
+            using (OpenCbsCommand c = new OpenCbsCommand(q, conn))
+            using (OpenCbsReader r = c.ExecuteReader())
+            {
+                if (r.Empty) return qeuedSMSs;
+
+                while (r.Read())
+                {
+                    var queuedSMS = new QueuedSMS
+                    {
+                        Id = r.GetInt("Id"),
+                        From = r.GetString("From"),
+                        Recipient = r.GetString("Recipient"),
+                        RecipientId = r.GetNullInt("RecipientId"),
+                        ContractId = r.GetNullInt("ContractId"),
+                        Charged = r.GetNullBool("Charged"),
+                        Message = r.GetString("Message"),
+                        CreatedOnUtc = r.GetDateTime("CreatedOnUtc"),
+                        SentOnUtc = r.GetNullDateTime("SentOnUtc"),
+                        SentTries = r.GetInt("SentTries"),
+                        Response = r.GetString("Response"),
+                        Deleted = r.GetBool("Deleted"),
+                    };                    
+                    qeuedSMSs.Add(queuedSMS);
+                }
+            }
+            return qeuedSMSs;
+        }
+
+        public void Delete(QueuedSMS queuedSMS)
+        {
+            const string q = @"UPDATE dbo.QueuedSMS
+            SET Deleted = 1 WHERE Id = @Id";
+            using (SqlConnection conn = GetConnection())
+            using (OpenCbsCommand c = new OpenCbsCommand(q, conn))
+            {
+                c.AddParam("@Id", queuedSMS.Id);
+                c.ExecuteNonQuery();
+            }
+        }
+
+        public bool Update(QueuedSMS queuedSMS)
+        {                                    
+            bool updateOk = false;
+            try
+            {
+                const string q = @"UPDATE dbo.QueuedSMS
+                              SET [From] = @From, 
+                                  [Recipient] = @Recipient,
+                                  [RecipientId] = @RecipientId,
+                                  [ContractId] = @ContractId,
+                                  [Charged] = @Charged,
+                                  [Message] = @Message, 
+                                  [CreatedOnUtc] = @CreatedOnUtc, 
+                                  [SentOnUtc] = @SentOnUtc, 
+                                  [SentTries] = @SentTries,
+                                  [Response] = @Response, 
+                                  [Deleted] = @Deleted
+                              WHERE Id = @Id";
+
+
+                using (SqlConnection conn = GetConnection())
+                using (OpenCbsCommand c = new OpenCbsCommand(q, conn))
+                {
+                    c.AddParam("@Id", queuedSMS.Id);
+                    c.AddParam("@From", queuedSMS.From);
+                    c.AddParam("@Recipient", queuedSMS.Recipient);
+                    c.AddParam("@RecipientId", queuedSMS.RecipientId);
+                    c.AddParam("@ContractId", queuedSMS.ContractId);
+                    c.AddParam("@Charged", queuedSMS.Charged);
+                    c.AddParam("@Message", queuedSMS.Message);
+                    c.AddParam("@CreatedOnUtc", queuedSMS.CreatedOnUtc);
+                    c.AddParam("@SentOnUtc", queuedSMS.SentOnUtc);
+                    c.AddParam("@SentTries", queuedSMS.SentTries);
+                    c.AddParam("@Response", queuedSMS.Response);
+                    c.AddParam("@Deleted", false);
+                    c.ExecuteNonQuery();
+                    updateOk = true;
+                }
+            }
+            catch (System.Exception ex)
+            {
+                throw ex;
+            }
+            return updateOk;
+        }
+
+        public int Add(QueuedSMS queuedSMS)
+        {
+            const string q = @"INSERT INTO dbo.QueuedSMS
+                              ([From], [Recipient], [RecipientId], [ContractId], [Charged], [Message], CreatedOnUtc, SentOnUtc, SentTries, Deleted)
+                              VALUES (@From, @Recipient, @RecipientId, @ContractId, @Charged, @Message, @CreatedOnUtc, @SentOnUtc, @SentTries, @Deleted)
+                              SELECT SCOPE_IDENTITY()";
+
+            using (SqlConnection conn = GetConnection())
+            using (OpenCbsCommand c = new OpenCbsCommand(q, conn))
+            {
+                c.AddParam("@From", queuedSMS.From);
+                c.AddParam("@Recipient", queuedSMS.Recipient);
+                c.AddParam("@RecipientId", queuedSMS.RecipientId);
+                c.AddParam("@ContractId", queuedSMS.ContractId);
+                c.AddParam("@Charged", queuedSMS.Charged);
+                c.AddParam("@Message", queuedSMS.Message);
+                c.AddParam("@CreatedOnUtc", queuedSMS.CreatedOnUtc);
+                c.AddParam("@SentOnUtc", queuedSMS.SentOnUtc);
+                c.AddParam("@SentTries", queuedSMS.SentTries);
+                c.AddParam("@Deleted", false);
+                return int.Parse(c.ExecuteScalar().ToString());
+            }
+        }
+    }
+}

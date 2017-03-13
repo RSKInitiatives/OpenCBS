@@ -1,0 +1,176 @@
+﻿@using Free.iso8583;
+@using Iso8583WebClient;
+@using System.Collections.Generic;
+
+<h3 style="display:inline">Server:</h3>&nbsp;&nbsp;<input type="text"
+id="txtServerHost" name="txtServerHost" size="20" value="@ViewBag.ServerHost" />&nbsp;&nbsp;&nbsp;&nbsp;Port:&nbsp;&nbsp;<input
+type="text" id="txtServerPort" name="txtServerPort" size="5" value="@ViewBag.ServerPort" />&nbsp;&nbsp;&nbsp;&nbsp;<input
+type="checkbox" id="chkSsl" name="chkSsl" value="True" @(ViewBag.IsSSL ? "checked='checked'" : "") 
+/>&nbsp;Use&nbsp;SSL/TLS&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" id="btnSend" name="btnSend" value="Send" onclick="btnSend_Click()" />
+<script type="text/javascript">
+var g_reqModel = @(ViewBag.ModelJson != "null" ? "true" : "false");
+
+function btnSend_Click() {
+    $.ajax({
+        type: "POST",
+        url: '@Url.Content("~/api/Iso8583")',
+        data: JSON.stringify({
+            ServerHost: $("#txtServerHost").val(),
+            ServerPort: isNaN(parseInt($("#txtServerPort").val())) ? 3107 : parseInt($("#txtServerPort").val()),
+            IsSSL: document.getElementById("chkSsl").checked,
+            RequestString: !g_reqModel ? $("#txtRequest").val() : null
+        }),
+        contentType: "application/json; charset=utf-8",
+        success: function (data) {
+            if (data.indexOf("Error: ") == 0) {
+                alert(data.substr("Error: ".length));
+            } else {
+                $('#txtResponse').val(data);
+            }
+        },
+        error: function (_, status, message) {
+            alert(message);
+        }
+    });
+}
+</script>
+
+<h3>Request</h3>
+Fill the textbox below with the bytes of request message in hexadecimal format and then click 'Send' button
+to send the message to the server.<br />
+Or you can choose/edit one of the following example messages:&nbsp<select id="cmbExampleMessages" name="cmbExampleMessages">
+@foreach (KeyValuePair<String, EditedItem> kvp in EditedItems.Item)
+{
+    <option>@kvp.Key</option>
+}
+</select>&nbsp;<input type="button" id="btnChoose" name="btnChoose" value="Choose" onclick="btnChoose_Click()" /><input
+type="button" id="btnEdit" name="btnEdit" value="Edit" onclick="btnEdit_Click()" /><input
+type="button" id="btnClear" name="btnClear" value="Clear" onclick="btnClear_Click()" /><br />
+
+<textarea id="txtRequest" name="txtRequest" cols="150" rows="10">@(ViewBag.ModelJson == "null" ? "" : ViewBag.ModelJson)</textarea>
+
+<br /><h3 style="display:inline">Response</h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The response message will be shown
+in the textbox below.<br />
+<textarea id="txtResponse" name="txtResponse" cols="150" rows="10" readonly="readonly"></textarea>
+
+<h3>Log</h3>
+<textarea id="txtLog" name="txtLog" cols="150" rows="10" readonly="readonly"></textarea>
+
+<script type="text/javascript">
+var g_exampleMessages = {};
+@{foreach (KeyValuePair<String, EditedItem> kvp in EditedItems.Item)
+  {
+  @(Html.Raw("g_exampleMessages['" + kvp.Key + "'] = '" + kvp.Value.RawMessageString + "';"))
+  }}
+
+@*var g_exampleMessages = {
+    "Transfer Inquiry":
+"01 01 60 00 05 80 53 01 00 30 20 05 80 20 C0 10 07 39 10 00 00 07 25 00 00 00 00 31 07 00 21 00 05 00\n" +
+"37 49 91 87 02 73 00 27 3C D6 2B 27 1A 0A 38 08 00 80 12 40 31 32 33 34 31 32 33 34 31 32 33 34 35 31 32\n" +
+"33 34 35 31 32 33 34 35 77 BB AA 66 78 3B D7 CC 00 06 30 30 33 31 30 37 01 56 37 38 30 30 30 30 30 30 30\n" +
+"32 33 31 34 30 31 32 33 34 35 36 37 38 39 30 31 32 33 34 35 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20\n" +
+"20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 31 32 33 20 20 20 20 20\n" +
+"20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20\n" +
+"20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20\n" +
+"20 20 20 20 20 20 20 00 00 00 00 00 00 00 00",
+    "Transfer":
+"01 01 60 00 05 80 53 02 00 30 20 05 80 20 C0 10 07 40 10 00 00 07 25 00 00 00 00 31 07 00 21 00 05 00\n" +
+"37 49 91 87 02 73 00 27 3C D6 2B 27 1A 0A 38 08 00 80 12 40 31 32 33 34 31 32 33 34 31 32 33 34 35 31 32\n" +
+"33 34 35 31 32 33 34 35 77 BB AA 66 78 3B D7 CC 00 06 30 30 33 31 30 37 01 56 37 38 30 30 30 30 30 30 30\n" +
+"32 33 31 34 30 31 32 33 34 35 36 37 38 39 30 31 32 33 34 35 20 20 20 20 20 20 20 20 20 20 20 20 44 45 53\n" +
+"54 49 4E 41 54 49 4F 4E 20 4E 41 4D 45 20 47 45 4E 45 52 41 54 45 44 20 20 20 20 31 32 33 20 20 20 20 20\n" +
+"20 20 20 20 20 20 20 20 30 30 30 30 30 30 30 32 33 31 34 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20\n" +
+"20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20\n" +
+"20 20 20 20 20 20 20 00 00 00 00 00 00 00 00",
+    "TransferSB":
+"01 1B 60 00 05 80 53 02 00 B0 20 05 80 20 C0 10 07 00 00 00 00 01 00 00 00 40 10 00 00 07 25 00 00 00\n" +
+"00 31 07 00 21 00 05 00 37 49 91 87 02 73 00 27 3C D6 2B 27 1A 0A 38 08 00 80 12 40 31 32 33 34 31 32 33\n" +
+"34 31 32 33 34 35 31 32 33 34 35 31 32 33 34 35 77 BB AA 66 78 3B D7 CC 00 06 30 30 33 31 30 37 01 56 37\n" +
+"38 30 30 30 30 30 30 30 32 33 31 34 30 31 32 33 34 35 36 37 38 39 30 31 32 33 34 35 20 20 20 20 20 20 20\n" +
+"20 20 20 20 20 44 45 53 54 49 4E 41 54 49 4F 4E 20 4E 41 4D 45 20 47 45 4E 45 52 41 54 45 44 20 20 20 20\n" +
+"31 32 33 20 20 20 20 20 20 20 20 20 20 20 20 20 30 30 30 30 30 30 30 32 33 31 34 20 20 20 20 20 20 20 20\n" +
+"20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20\n" +
+"20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 00 00 00 00 00 00 00 00 00 16 54 52 41 4E 53 41 43 54 49 4F\n" +
+"4E 20 4E 4F 54 45",
+    "Balance Inquiry":
+"00 5D 60 00 05 80 53 01 00 20 20 05 80 20 C0 10 05 31 10 00 00 31 07 00 21 00 05 00 37 49 91 87 02 73\n" +
+"00 27 3C D6 2B 27 1A 0A 38 08 00 80 12 40 31 32 33 34 31 32 33 34 31 32 33 34 35 31 32 33 34 35 31 32 33\n" +
+"34 35 77 BB AA 66 78 3B D7 CC 00 06 30 30 33 31 30 37 00 00 00 00 00 00 00 00",
+    "Logon":
+"00 1F 60 00 05 80 53 08 00 20 20 01 00 00 80 00 00 92 00 00 00 31 07 00 05 31 32 33 34 31 32 33 34"
+};*@
+
+function ClearMessage() {
+    $("#txtRequest").attr("readOnly", false);
+    $("#txtRequest").val("");
+    $("#txtResponse").val("");
+    g_reqModel = false;
+}
+
+function btnChoose_Click() {
+    ClearMessage();
+    var messageType = $("#cmbExampleMessages").val();
+    try {
+        $("#txtRequest").val(g_exampleMessages[messageType]);
+    }
+    catch (ex) {
+        window.alert(messageType + " : " + ex.toString());
+    }
+}
+
+function btnEdit_Click() {
+    location.href = '@Url.Content("~/MessageEditor")?editedItem=' + escape(document.getElementById('cmbExampleMessages').value)
+        + '&host=' + escape($("#txtServerHost").val())
+        + '&port=' + escape($("#txtServerPort").val())
+        + (document.getElementById("chkSsl").checked ? '&isSSl=true' : '');
+}
+
+var TIMER_INTERVAL = 3000;
+var g_startReadLog = 0;
+
+function btnClear_Click() {
+    $("#txtLog").val("");
+    $.ajax({
+        async: false,
+        type: "DELETE",
+        url: '@Url.Content("~/api/Iso8583")'
+    });
+    g_startReadLog = 0;
+    ClearMessage();
+}
+
+function getLogs() {
+    $.ajax({
+        type: "GET",
+        url: '@VirtualPathUtility.ToAbsolute("~/api/Iso8583")?startReadLog=' + g_startReadLog,
+        error: function (_, status, message) {
+            var txtLogs = $("#txtLog");
+            var logs = txtLogs.val(txtLogs.val() + "Error on getting logs: " + message + "\n");
+            setTimeout(getLogs, TIMER_INTERVAL);
+        },
+        success: function (data) {
+            var txtLogs = $("#txtLog");
+            txtLogs.val(txtLogs.val() + data);
+            g_startReadLog += data.length;
+            setTimeout(getLogs, TIMER_INTERVAL);
+        }
+    });
+}
+
+$(document).ready(function () {
+    if (g_reqModel) $("#txtRequest").prop("readOnly", true);
+    $("#cmbExampleMessages").val("@Html.Raw(ViewBag.EditedItem)");
+    getLogs();
+});
+</script>
+
+<div style="border-style:double; border-width:3px; border-color:black; font-size:10pt; margin:20px; padding:10px;">
+    If you feel <b>Free.iso8583</b> is useful, please make a donation via PayPal by clicking the button below:<br/><br />
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="4ZKPC3URPZ24U">
+        <input type="image" src='@Url.Content("~/Content/btn_donateCC_LG.gif")' border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <!--input type="image" src="https://www.paypalobjects.com/id_ID/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/id_ID/i/scr/pixel.gif" width="1" height="1" -->
+    </form>
+</div>

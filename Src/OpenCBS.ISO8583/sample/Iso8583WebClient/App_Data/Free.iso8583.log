@@ -1,0 +1,13 @@
+8/29/2016 4:08:10 PM   Config loaded...
+8/29/2016 4:09:23 PM   An error happens when connecting to the server or An error in SSL connection.
+Error Message: No connection could be made because the target machine actively refused it 127.0.0.1:3107
+Thrown: SocketException
+Source: System
+StackTrace:
+   at System.Net.Sockets.TcpClient..ctor(String hostname, Int32 port)
+   at Free.iso8583.MessageClient.CheckSocket() in e:\Projects\Free.iso8583\src\MessageClient.cs:line 149
+   at Free.iso8583.MessageClient.Send(Byte[] message) in e:\Projects\Free.iso8583\src\MessageClient.cs:line 177
+   at Free.iso8583.MessageClient.SendBytes(Byte[] message) in e:\Projects\Free.iso8583\src\MessageClient.cs:line 108
+TargetSite: Void .ctor(System.String, Int32)
+
+8/29/2016 4:09:23 PM   Error: An error occured. Try to check/uncheck 'Use SSL/TLS' option.

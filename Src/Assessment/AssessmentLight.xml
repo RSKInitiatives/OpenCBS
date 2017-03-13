@@ -1,0 +1,616 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LightAssessment xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>OpenCBS.sln</Name>
+  <FileName>C:\Users\thesl\Documents\Visual Studio 2015\Projects\OpenCBS\Src\OpenCBS.sln</FileName>
+  <LOC>198491</LOC>
+  <FilesCount>1173</FilesCount>
+  <ProjectsCount>22</ProjectsCount>
+  <Projects>
+    <Project>
+      <Name>OpenCBS.CoreDomain.csproj</Name>
+      <FileName>C:\Users\thesl\Documents\Visual Studio 2015\Projects\OpenCBS\Src\OpenCBS.CoreDomain\OpenCBS.CoreDomain.csproj</FileName>
+      <GuidType>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</GuidType>
+      <LOC>28004</LOC>
+      <Files>278</Files>
+      <MissingFiles>0</MissingFiles>
+      <MissingFilesInProject />
+      <References>
+        <string>System</string>
+        <string>System.ComponentModel.Composition</string>
+        <string>System.ComponentModel.DataAnnotations</string>
+        <string>System.Core</string>
+        <string>System.Data</string>
+        <string>System.Data.DataSetExtensions</string>
+        <string>System.Drawing</string>
+        <string>System.Xml</string>
+      </References>
+      <ComReferences />
+      <ProjectReferences>
+        <string>..\OpenCBS.Enums\OpenCBS.Enums.csproj</string>
+        <string>..\OpenCBS.ExceptionsHandler\OpenCBS.ExceptionsHandler.csproj</string>
+        <string>..\OpenCBS.MultiLanguage\OpenCBS.MultiLanguageRessources.csproj</string>
+        <string>..\OpenCBS.Shared\OpenCBS.Shared.csproj</string>
+      </ProjectReferences>
+    </Project>
+    <Project>
+      <Name>OpenCBS.Enums.csproj</Name>
+      <FileName>C:\Users\thesl\Documents\Visual Studio 2015\Projects\OpenCBS\Src\OpenCBS.Enums\OpenCBS.Enums.csproj</FileName>
+      <GuidType>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</GuidType>
+      <LOC>2129</LOC>
+      <Files>57</Files>
+      <MissingFiles>0</MissingFiles>
+      <MissingFilesInProject />
+      <References>
+        <string>System</string>
+        <string>System.Core</string>
+        <string>System.Data</string>
+        <string>System.Xml</string>
+      </References>
+      <ComReferences />
+      <ProjectReferences />
+    </Project>
+    <Project>
+      <Name>OpenCBS.Shared.csproj</Name>
+      <FileName>C:\Users\thesl\Documents\Visual Studio 2015\Projects\OpenCBS\Src\OpenCBS.Shared\OpenCBS.Shared.csproj</FileName>
+      <GuidType>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</GuidType>
+      <LOC>3849</LOC>
+      <Files>33</Files>
+      <MissingFiles>0</MissingFiles>
+      <MissingFilesInProject />
+      <References>
+        <string>System</string>
+        <string>System.ComponentModel.Composition, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL</string>
+        <string>System.configuration</string>
+        <string>System.Core</string>
+        <string>System.Data</string>
+        <string>System.Drawing</string>
+        <string>System.Runtime.Serialization</string>
+        <string>System.Security</string>
+        <string>System.ServiceModel</string>
+        <string>System.Windows.Forms</string>
+        <string>System.Xml</string>
+      </References>
+      <ComReferences />
+      <ProjectReferences>
+        <string>..\OpenCBS.Enums\OpenCBS.Enums.csproj</string>
+      </ProjectReferences>
+    </Project>
+    <Project>
+      <Name>OpenCBS.MultiLanguageRessources.csproj</Name>
+      <FileName>C:\Users\thesl\Documents\Visual Studio 2015\Projects\OpenCBS\Src\OpenCBS.MultiLanguage\OpenCBS.MultiLanguageRessources.csproj</FileName>
+      <GuidType>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</GuidType>
+      <LOC>894</LOC>
+      <Files>11</Files>
+      <MissingFiles>0</MissingFiles>
+      <MissingFilesInProject />
+      <References>
+        <string>System</string>
+        <string>System.Data</string>
+        <string>System.Xml</string>
+      </References>
+      <ComReferences />
+      <ProjectReferences>
+        <string>..\OpenCBS.Shared\OpenCBS.Shared.csproj</string>
+      </ProjectReferences>
+    </Project>
+    <Project>
+      <Name>OpenCBS.Manager.csproj</Name>
+      <FileName>C:\Users\thesl\Documents\Visual Studio 2015\Projects\OpenCBS\Src\OpenCBS.Manager\OpenCBS.Manager.csproj</FileName>
+      <GuidType>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</GuidType>
+      <LOC>25627</LOC>
+      <Files>50</Files>
+      <MissingFiles>0</MissingFiles>
+      <MissingFilesInProject />
+      <References>
+        <string>Dapper, Version=1.12.1.1, Culture=neutral, processorArchitecture=MSIL</string>
+        <string>Ionic.Zip, Version=1.9.1.5, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL</string>
+        <string>System</string>
+        <string>System.Configuration</string>
+        <string>System.Core</string>
+        <string>System.Data</string>
+        <string>System.Data.Linq</string>
+        <string>System.Drawing</string>
+        <string>System.Security</string>
+        <string>System.Windows.Forms</string>
+        <string>System.Xml</string>
+      </References>
+      <ComReferences />
+      <ProjectReferences>
+        <string>..\OpenCBS.ConnectionManager\OpenCBS.DatabaseConnection.csproj</string>
+        <string>..\OpenCBS.CoreDomain\OpenCBS.CoreDomain.csproj</string>
+        <string>..\OpenCBS.Enums\OpenCBS.Enums.csproj</string>
+        <string>..\OpenCBS.Reports\OpenCBS.Reports.csproj</string>
+        <string>..\OpenCBS.Shared\OpenCBS.Shared.csproj</string>
+      </ProjectReferences>
+    </Project>
+    <Project>
+      <Name>OpenCBS.DatabaseConnection.csproj</Name>
+      <FileName>C:\Users\thesl\Documents\Visual Studio 2015\Projects\OpenCBS\Src\OpenCBS.ConnectionManager\OpenCBS.DatabaseConnection.csproj</FileName>
+      <GuidType>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</GuidType>
+      <LOC>683</LOC>
+      <Files>6</Files>
+      <MissingFiles>0</MissingFiles>
+      <MissingFilesInProject />
+      <References>
+        <string>log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL</string>
+        <string>System</string>
+        <string>System.Data</string>
+        <string>System.Xml</string>
+      </References>
+      <ComReferences />
+      <ProjectReferences>
+        <string>..\OpenCBS.CoreDomain\OpenCBS.CoreDomain.csproj</string>
+        <string>..\OpenCBS.Shared\OpenCBS.Shared.csproj</string>
+      </ProjectReferences>
+    </Project>
+    <Project>
+      <Name>OpenCBS.Reports.csproj</Name>
+      <FileName>C:\Users\thesl\Documents\Visual Studio 2015\Projects\OpenCBS\Src\OpenCBS.Reports\OpenCBS.Reports.csproj</FileName>
+      <GuidType>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</GuidType>
+      <LOC>2319</LOC>
+      <Files>14</Files>
+      <MissingFiles>0</MissingFiles>
+      <MissingFilesInProject />
+      <References>
+        <string>CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL</string>
+        <string>CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL</string>
+        <string>CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL</string>
+        <string>CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL</string>
+        <string>Dapper, Version=1.12.1.1, Culture=neutral, processorArchitecture=MSIL</string>
+        <string>ICSharpCode.SharpZipLib, Version=0.84.0.0, Culture=neutral, PublicKeyToken=1b03e6acf1164f73</string>
+        <string>Microsoft.CSharp</string>
+        <string>System</string>
+        <string>System.Core</string>
+        <string>System.Drawing</string>
+        <string>System.Web.Services</string>
+        <string>System.Windows.Forms</string>
+        <string>System.Xml.Linq</string>
+        <string>System.Data.DataSetExtensions</string>
+        <string>System.Data</string>
+        <string>System.Xml</string>
+      </References>
+      <ComReferences />
+      <ProjectReferences>
+        <string>..\OpenCBS.ConnectionManager\OpenCBS.DatabaseConnection.csproj</string>
+        <string>..\OpenCBS.CoreDomain\OpenCBS.CoreDomain.csproj</string>
+        <string>..\OpenCBS.Enums\OpenCBS.Enums.csproj</string>
+        <string>..\OpenCBS.ExceptionsHandler\OpenCBS.ExceptionsHandler.csproj</string>
+        <string>..\OpenCBS.Shared\OpenCBS.Shared.csproj</string>
+      </ProjectReferences>
+    </Project>
+    <Project>
+      <Name>OpenCBS.Extensions.csproj</Name>
+      <FileName>C:\Users\thesl\Documents\Visual Studio 2015\Projects\OpenCBS\Src\OpenCBS.Extensions\OpenCBS.Extensions.csproj</FileName>
+      <GuidType>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</GuidType>
+      <LOC>1253</LOC>
+      <Files>30</Files>
+      <MissingFiles>0</MissingFiles>
+      <MissingFilesInProject />
+      <References>
+        <string>CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL</string>
+        <string>ObjectListView</string>
+        <string>OpenCBS.ExceptionsHandler</string>
+        <string>System</string>
+        <string>System.ComponentModel.Composition</string>
+        <string>System.Core</string>
+        <string>System.Data.DataSetExtensions</string>
+        <string>System.Data</string>
+        <string>System.Drawing</string>
+        <string>System.Windows.Forms</string>
+        <string>System.Xml</string>
+        <string>System.Xml.Linq</string>
+      </References>
+      <ComReferences />
+      <ProjectReferences>
+        <string>..\OpenCBS.Controls\OpenCBS.Controls.csproj</string>
+        <string>..\OpenCBS.CoreDomain\OpenCBS.CoreDomain.csproj</string>
+        <string>..\OpenCBS.Enums\OpenCBS.Enums.csproj</string>
+        <string>..\OpenCBS.Reports\OpenCBS.Reports.csproj</string>
+        <string>..\OpenCBS.Shared\OpenCBS.Shared.csproj</string>
+      </ProjectReferences>
+    </Project>
+    <Project>
+      <Name>OpenCBS.Stringifier.csproj</Name>
+      <FileName>C:\Users\thesl\Documents\Visual Studio 2015\Projects\OpenCBS\Src\OpenCBS.Stringifier\OpenCBS.Stringifier.csproj</FileName>
+      <GuidType>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</GuidType>
+      <LOC>1606</LOC>
+      <Files>13</Files>
+      <MissingFiles>0</MissingFiles>
+      <MissingFilesInProject />
+      <References>
+        <string>System</string>
+        <string>System.Core</string>
+        <string>System.Xml.Linq</string>
+        <string>System.Data.DataSetExtensions</string>
+        <string>System.Data</string>
+        <string>System.Xml</string>
+      </References>
+      <ComReferences />
+      <ProjectReferences />
+    </Project>
+    <Project>
+      <Name>OpenCBS.ExceptionsHandler.csproj</Name>
+      <FileName>C:\Users\thesl\Documents\Visual Studio 2015\Projects\OpenCBS\Src\OpenCBS.ExceptionsHandler\OpenCBS.ExceptionsHandler.csproj</FileName>
+      <GuidType>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</GuidType>
+      <LOC>4783</LOC>
+      <Files>47</Files>
+      <MissingFiles>0</MissingFiles>
+      <MissingFilesInProject />
+      <References>
+        <string>System</string>
+        <string>System.Data</string>
+        <string>System.Windows.Forms</string>
+        <string>System.Xml</string>
+      </References>
+      <ComReferences />
+      <ProjectReferences>
+        <string>..\OpenCBS.Enums\OpenCBS.Enums.csproj</string>
+        <string>..\OpenCBS.MultiLanguage\OpenCBS.MultiLanguageRessources.csproj</string>
+        <string>..\OpenCBS.Shared\OpenCBS.Shared.csproj</string>
+      </ProjectReferences>
+    </Project>
+    <Project>
+      <Name>OpenCBS.GUI.csproj</Name>
+      <FileName>C:\Users\thesl\Documents\Visual Studio 2015\Projects\OpenCBS\Src\OpenCBS.GUI\OpenCBS.GUI.csproj</FileName>
+      <GuidType>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</GuidType>
+      <LOC>85474</LOC>
+      <Files>273</Files>
+      <MissingFiles>0</MissingFiles>
+      <MissingFilesInProject />
+      <References>
+        <string>AutoMapper</string>
+        <string>AutoUpdater.NET</string>
+        <string>CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL</string>
+        <string>ObjectListView, Version=2.8.1.33936, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4, processorArchitecture=MSIL</string>
+        <string>stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</string>
+        <string>StructureMap, Version=3.1.4.0, Culture=neutral, processorArchitecture=MSIL</string>
+        <string>StructureMap.Net4, Version=3.1.4.0, Culture=neutral, processorArchitecture=MSIL</string>
+        <string>System</string>
+        <string>System.ComponentModel.Composition</string>
+        <string>System.Core</string>
+        <string>System.Data</string>
+        <string>System.Deployment</string>
+        <string>System.Design</string>
+        <string>System.Drawing</string>
+        <string>System.Messaging</string>
+        <string>System.Runtime.Serialization</string>
+        <string>System.ServiceModel</string>
+        <string>System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL</string>
+        <string>System.Windows.Forms</string>
+        <string>System.Windows.Forms.DataVisualization</string>
+        <string>System.Xml</string>
+        <string>ZedGraph</string>
+      </References>
+      <ComReferences />
+      <ProjectReferences>
+        <string>..\OpenCBS.Services\OpenCBS.Services.csproj</string>
+        <string>..\OpenCBS.TextControl\TextControl\OpenCBS.TextControl.csproj</string>
+        <string>..\OpenCBS.ArchitectureV2\OpenCBS.ArchitectureV2.csproj</string>
+        <string>..\OpenCBS.Controls\OpenCBS.Controls.csproj</string>
+        <string>..\OpenCBS.CoreDomain\OpenCBS.CoreDomain.csproj</string>
+        <string>..\OpenCBS.Engine\OpenCBS.Engine.csproj</string>
+        <string>..\OpenCBS.Enums\OpenCBS.Enums.csproj</string>
+        <string>..\OpenCBS.ExceptionsHandler\OpenCBS.ExceptionsHandler.csproj</string>
+        <string>..\OpenCBS.Extensions.Samples\OpenCBS.Extensions.Samples.csproj</string>
+        <string>..\OpenCBS.Extensions\OpenCBS.Extensions.csproj</string>
+        <string>..\OpenCBS.GUI.Restarter\OpenCBS.GUI.Restarter.csproj</string>
+        <string>..\OpenCBS.Messaging\OpenCBS.Messaging.csproj</string>
+        <string>..\OpenCBS.MultiLanguage\OpenCBS.MultiLanguageRessources.csproj</string>
+        <string>..\OpenCBS.Reports\OpenCBS.Reports.csproj</string>
+        <string>..\OpenCBS.Shared\OpenCBS.Shared.csproj</string>
+        <string>..\OpenCBS.Stringifier\OpenCBS.Stringifier.csproj</string>
+      </ProjectReferences>
+    </Project>
+    <Project>
+      <Name>OpenCBS.GUI.Restarter.csproj</Name>
+      <FileName>C:\Users\thesl\Documents\Visual Studio 2015\Projects\OpenCBS\Src\OpenCBS.GUI.Restarter\OpenCBS.GUI.Restarter.csproj</FileName>
+      <GuidType>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</GuidType>
+      <LOC>302</LOC>
+      <Files>7</Files>
+      <MissingFiles>0</MissingFiles>
+      <MissingFilesInProject />
+      <References>
+        <string>System</string>
+        <string>System.Data</string>
+        <string>System.Deployment</string>
+        <string>System.Drawing</string>
+        <string>System.Windows.Forms</string>
+        <string>System.Xml</string>
+      </References>
+      <ComReferences />
+      <ProjectReferences>
+        <string>..\OpenCBS.Shared\OpenCBS.Shared.csproj</string>
+      </ProjectReferences>
+    </Project>
+    <Project>
+      <Name>OpenCBS.Extensions.Samples.csproj</Name>
+      <FileName>C:\Users\thesl\Documents\Visual Studio 2015\Projects\OpenCBS\Src\OpenCBS.Extensions.Samples\OpenCBS.Extensions.Samples.csproj</FileName>
+      <GuidType>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</GuidType>
+      <LOC>467</LOC>
+      <Files>9</Files>
+      <MissingFiles>0</MissingFiles>
+      <MissingFilesInProject />
+      <References>
+        <string>System</string>
+        <string>System.ComponentModel.Composition</string>
+        <string>System.Core</string>
+        <string>System.Windows.Forms</string>
+        <string>System.Xml.Linq</string>
+        <string>System.Data.DataSetExtensions</string>
+        <string>System.Data</string>
+        <string>System.Xml</string>
+      </References>
+      <ComReferences />
+      <ProjectReferences>
+        <string>..\OpenCBS.CoreDomain\OpenCBS.CoreDomain.csproj</string>
+        <string>..\OpenCBS.Extensions\OpenCBS.Extensions.csproj</string>
+      </ProjectReferences>
+    </Project>
+    <Project>
+      <Name>OpenCBS.Engine.csproj</Name>
+      <FileName>C:\Users\thesl\Documents\Visual Studio 2015\Projects\OpenCBS\Src\OpenCBS.Engine\OpenCBS.Engine.csproj</FileName>
+      <GuidType>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</GuidType>
+      <LOC>1681</LOC>
+      <Files>48</Files>
+      <MissingFiles>0</MissingFiles>
+      <MissingFilesInProject />
+      <References>
+        <string>System</string>
+        <string>System.ComponentModel.Composition, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL</string>
+        <string>System.Core</string>
+        <string>System.Xml.Linq</string>
+        <string>System.Data.DataSetExtensions</string>
+        <string>System.Data</string>
+        <string>System.Xml</string>
+      </References>
+      <ComReferences />
+      <ProjectReferences>
+        <string>..\OpenCBS.CoreDomain\OpenCBS.CoreDomain.csproj</string>
+        <string>..\OpenCBS.Enums\OpenCBS.Enums.csproj</string>
+        <string>..\OpenCBS.Shared\OpenCBS.Shared.csproj</string>
+      </ProjectReferences>
+    </Project>
+    <Project>
+      <Name>OpenCBS.Controls.csproj</Name>
+      <FileName>C:\Users\thesl\Documents\Visual Studio 2015\Projects\OpenCBS\Src\OpenCBS.Controls\OpenCBS.Controls.csproj</FileName>
+      <GuidType>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</GuidType>
+      <LOC>1847</LOC>
+      <Files>11</Files>
+      <MissingFiles>0</MissingFiles>
+      <MissingFilesInProject />
+      <References>
+        <string>CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL</string>
+        <string>ObjectListView, Version=2.8.1.33936, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4, processorArchitecture=MSIL</string>
+        <string>System</string>
+        <string>System.Core</string>
+        <string>System.Drawing</string>
+        <string>System.Windows.Forms</string>
+        <string>System.Xml.Linq</string>
+        <string>System.Data.DataSetExtensions</string>
+        <string>System.Data</string>
+        <string>System.Xml</string>
+      </References>
+      <ComReferences />
+      <ProjectReferences>
+        <string>..\OpenCBS.CoreDomain\OpenCBS.CoreDomain.csproj</string>
+        <string>..\OpenCBS.ExceptionsHandler\OpenCBS.ExceptionsHandler.csproj</string>
+        <string>..\OpenCBS.Reports\OpenCBS.Reports.csproj</string>
+        <string>..\OpenCBS.Shared\OpenCBS.Shared.csproj</string>
+      </ProjectReferences>
+    </Project>
+    <Project>
+      <Name>OpenCBS.ArchitectureV2.csproj</Name>
+      <FileName>C:\Users\thesl\Documents\Visual Studio 2015\Projects\OpenCBS\Src\OpenCBS.ArchitectureV2\OpenCBS.ArchitectureV2.csproj</FileName>
+      <GuidType>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</GuidType>
+      <LOC>7038</LOC>
+      <Files>154</Files>
+      <MissingFiles>0</MissingFiles>
+      <MissingFilesInProject />
+      <References>
+        <string>CommonServiceLocator.StructureMapAdapter.Unofficial, Version=3.0.5.0, Culture=neutral, processorArchitecture=MSIL</string>
+        <string>Cyotek.Windows.Forms.TabList, Version=1.0.1.0, Culture=neutral, PublicKeyToken=58daa28b0b2de221, processorArchitecture=MSIL</string>
+        <string>Dapper, Version=1.12.1.1, Culture=neutral, processorArchitecture=MSIL</string>
+        <string>IronPython</string>
+        <string>Microsoft.Dynamic</string>
+        <string>Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL</string>
+        <string>Microsoft.Scripting</string>
+        <string>Newtonsoft.Json</string>
+        <string>ObjectListView, Version=2.8.1.33936, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4, processorArchitecture=MSIL</string>
+        <string>StructureMap, Version=4.1.1.372, Culture=neutral, processorArchitecture=MSIL</string>
+        <string>StructureMap.Net4, Version=4.1.1.372, Culture=neutral, processorArchitecture=MSIL</string>
+        <string>System</string>
+        <string>System.ComponentModel.Composition</string>
+        <string>System.Core</string>
+        <string>System.Deployment</string>
+        <string>System.Design</string>
+        <string>System.Drawing</string>
+        <string>System.Windows.Forms</string>
+        <string>System.Xml.Linq</string>
+        <string>System.Data.DataSetExtensions</string>
+        <string>Microsoft.CSharp</string>
+        <string>System.Data</string>
+        <string>System.Xml</string>
+      </References>
+      <ComReferences />
+      <ProjectReferences>
+        <string>..\OpenCBS.Controls\OpenCBS.Controls.csproj</string>
+        <string>..\OpenCBS.CoreDomain\OpenCBS.CoreDomain.csproj</string>
+        <string>..\OpenCBS.Enums\OpenCBS.Enums.csproj</string>
+        <string>..\OpenCBS.Extensions\OpenCBS.Extensions.csproj</string>
+        <string>..\OpenCBS.Services\OpenCBS.Services.csproj</string>
+        <string>..\OpenCBS.Shared\OpenCBS.Shared.csproj</string>
+      </ProjectReferences>
+    </Project>
+    <Project>
+      <Name>OpenCBS.Messaging.csproj</Name>
+      <FileName>C:\Users\thesl\Documents\Visual Studio 2015\Projects\OpenCBS\Src\OpenCBS.Messaging\OpenCBS.Messaging.csproj</FileName>
+      <GuidType>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</GuidType>
+      <LOC>8248</LOC>
+      <Files>48</Files>
+      <MissingFiles>0</MissingFiles>
+      <MissingFilesInProject />
+      <References>
+        <string>CodeScales.Http</string>
+        <string>Fasterflect, Version=2.1.3.0, Culture=neutral, PublicKeyToken=38d18473284c1ca7, processorArchitecture=MSIL</string>
+        <string>RestSharp</string>
+        <string>System</string>
+        <string>System.ComponentModel.Composition</string>
+        <string>System.Core</string>
+        <string>System.Drawing</string>
+        <string>System.Xml.Linq</string>
+        <string>System.Data.DataSetExtensions</string>
+        <string>Microsoft.CSharp</string>
+        <string>System.Data</string>
+        <string>System.Xml</string>
+      </References>
+      <ComReferences />
+      <ProjectReferences>
+        <string>..\OpenCBS.CoreDomain\OpenCBS.CoreDomain.csproj</string>
+        <string>..\OpenCBS.Enums\OpenCBS.Enums.csproj</string>
+        <string>..\OpenCBS.Manager\OpenCBS.Manager.csproj</string>
+        <string>..\OpenCBS.Services\OpenCBS.Services.csproj</string>
+        <string>..\OpenCBS.Shared\OpenCBS.Shared.csproj</string>
+      </ProjectReferences>
+    </Project>
+    <Project>
+      <Name>OpenCBS.SchedulerService.csproj</Name>
+      <FileName>C:\Users\thesl\Documents\Visual Studio 2015\Projects\OpenCBS\Src\OpenCBS.SchedulerService\OpenCBS.SchedulerService.csproj</FileName>
+      <GuidType>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</GuidType>
+      <LOC>936</LOC>
+      <Files>10</Files>
+      <MissingFiles>0</MissingFiles>
+      <MissingFilesInProject />
+      <References>
+        <string>Common.Logging</string>
+        <string>Common.Logging.Core</string>
+        <string>Quartz, Version=2.3.3.0, Culture=neutral, PublicKeyToken=f6b8c98a402cc8a4, processorArchitecture=MSIL</string>
+        <string>System</string>
+        <string>System.Configuration.Install</string>
+        <string>System.Core</string>
+        <string>System.Management</string>
+        <string>System.Xml.Linq</string>
+        <string>System.Data.DataSetExtensions</string>
+        <string>Microsoft.CSharp</string>
+        <string>System.Data</string>
+        <string>System.ServiceProcess</string>
+        <string>System.Xml</string>
+      </References>
+      <ComReferences />
+      <ProjectReferences>
+        <string>..\OpenCBS.ConnectionManager\OpenCBS.DatabaseConnection.csproj</string>
+        <string>..\OpenCBS.CoreDomain\OpenCBS.CoreDomain.csproj</string>
+        <string>..\OpenCBS.Enums\OpenCBS.Enums.csproj</string>
+        <string>..\OpenCBS.Messaging\OpenCBS.Messaging.csproj</string>
+        <string>..\OpenCBS.Services\OpenCBS.Services.csproj</string>
+        <string>..\OpenCBS.Shared\OpenCBS.Shared.csproj</string>
+      </ProjectReferences>
+    </Project>
+    <Project>
+      <Name>OpenCBS.TextControl.csproj</Name>
+      <FileName>C:\Users\thesl\Documents\Visual Studio 2015\Projects\OpenCBS\Src\OpenCBS.TextControl\TextControl\OpenCBS.TextControl.csproj</FileName>
+      <GuidType>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</GuidType>
+      <LOC>4469</LOC>
+      <Files>19</Files>
+      <MissingFiles>0</MissingFiles>
+      <MissingFilesInProject />
+      <References>
+        <string>System</string>
+        <string>System.Data</string>
+        <string>System.Deployment</string>
+        <string>System.Drawing</string>
+        <string>System.Web</string>
+        <string>System.Windows.Forms</string>
+        <string>System.Xml</string>
+      </References>
+      <ComReferences>
+        <string>MSHTML</string>
+      </ComReferences>
+      <ProjectReferences />
+    </Project>
+    <Project>
+      <Name>OpenCBS.Update.csproj</Name>
+      <FileName>C:\Users\thesl\Documents\Visual Studio 2015\Projects\OpenCBS\Src\OpenCBS.Update\OpenCBS.Update.csproj</FileName>
+      <GuidType>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</GuidType>
+      <LOC>616</LOC>
+      <Files>5</Files>
+      <MissingFiles>0</MissingFiles>
+      <MissingFilesInProject />
+      <References>
+        <string>System</string>
+        <string>System.ComponentModel.Composition</string>
+        <string>System.Core</string>
+        <string>System.Deployment</string>
+        <string>System.Windows.Forms</string>
+        <string>System.Xml.Linq</string>
+        <string>System.Data.DataSetExtensions</string>
+        <string>Microsoft.CSharp</string>
+        <string>System.Data</string>
+        <string>System.Net.Http</string>
+        <string>System.Xml</string>
+      </References>
+      <ComReferences />
+      <ProjectReferences>
+        <string>..\OpenCBS.Enums\OpenCBS.Enums.csproj</string>
+        <string>..\OpenCBS.Extensions\OpenCBS.Extensions.csproj</string>
+        <string>..\OpenCBS.Shared\OpenCBS.Shared.csproj</string>
+      </ProjectReferences>
+    </Project>
+    <Project>
+      <Name>OpenCBS.SetupClient.vdproj</Name>
+      <FileName>C:\Users\thesl\Documents\Visual Studio 2015\Projects\OpenCBS\Src\OpenCBS.SetupClient\OpenCBS.SetupClient.vdproj</FileName>
+      <GuidType>{54435603-DBB4-11D2-8724-00A0C9A8B90C}</GuidType>
+      <LOC>0</LOC>
+      <Files>0</Files>
+      <MissingFiles>0</MissingFiles>
+      <MissingFilesInProject />
+      <References />
+      <ComReferences />
+      <ProjectReferences />
+    </Project>
+    <Project>
+      <Name>OpenCBS.Services.csproj</Name>
+      <FileName>C:\Users\thesl\Documents\Visual Studio 2015\Projects\OpenCBS\Src\OpenCBS.Services\OpenCBS.Services.csproj</FileName>
+      <GuidType>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</GuidType>
+      <LOC>16266</LOC>
+      <Files>50</Files>
+      <MissingFiles>0</MissingFiles>
+      <MissingFilesInProject />
+      <References>
+        <string>AutoMapper</string>
+        <string>CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL</string>
+        <string>CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL</string>
+        <string>IronPython, Version=2.7.0.40, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL</string>
+        <string>IronPython.Modules, Version=2.7.0.40, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL</string>
+        <string>Microsoft.CSharp</string>
+        <string>Microsoft.Dynamic, Version=1.1.0.20, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL</string>
+        <string>Microsoft.Scripting, Version=1.1.0.20, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL</string>
+        <string>Microsoft.SqlServer.ConnectionInfo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL</string>
+        <string>Microsoft.SqlServer.Smo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL</string>
+        <string>StructureMap.Net4</string>
+        <string>System</string>
+        <string>System.ComponentModel.Composition</string>
+        <string>System.configuration</string>
+        <string>System.Core</string>
+        <string>System.Data</string>
+        <string>System.Data.Linq</string>
+        <string>System.Drawing</string>
+        <string>System.Runtime.Remoting</string>
+        <string>System.Windows.Forms</string>
+        <string>System.Xml</string>
+      </References>
+      <ComReferences />
+      <ProjectReferences>
+        <string>..\OpenCBS.ConnectionManager\OpenCBS.DatabaseConnection.csproj</string>
+        <string>..\OpenCBS.CoreDomain\OpenCBS.CoreDomain.csproj</string>
+        <string>..\OpenCBS.Engine\OpenCBS.Engine.csproj</string>
+        <string>..\OpenCBS.Enums\OpenCBS.Enums.csproj</string>
+        <string>..\OpenCBS.ExceptionsHandler\OpenCBS.ExceptionsHandler.csproj</string>
+        <string>..\OpenCBS.Extensions\OpenCBS.Extensions.csproj</string>
+        <string>..\OpenCBS.Manager\OpenCBS.Manager.csproj</string>
+        <string>..\OpenCBS.MultiLanguage\OpenCBS.MultiLanguageRessources.csproj</string>
+        <string>..\OpenCBS.Reports\OpenCBS.Reports.csproj</string>
+        <string>..\OpenCBS.Shared\OpenCBS.Shared.csproj</string>
+      </ProjectReferences>
+    </Project>
+  </Projects>
+</LightAssessment>

@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<label>
+  <MAIN_REPORT>
+    <fn_footer>"Накопительные контракты на "+ CStr({?pDate}, "dd.MM.yyyy")+" • "+
+{?USER_NAME} + " • " + {?BRANCH_NAME}</fn_footer>
+    <Text16>Накопительные контракты</Text16>
+    <Text3>Тип продукта</Text3>
+    <Text2>Код контракта</Text2>
+    <Text4>Имя продукта</Text4>
+    <Text5>Имя клиента</Text5>
+    <Text6>Код продукта</Text6>
+    <Text7>Дата создания</Text7>
+    <Text8>Баланс</Text8>
+    <Text9>Ставка %</Text9>
+    <Text10>Итого</Text10>
+    <Text14>из</Text14>
+    <Text11>Итого</Text11>
+    <Text17>для всех</Text17>
+    <Text12>ИТОГО</Text12>
+  </MAIN_REPORT>
+</label>

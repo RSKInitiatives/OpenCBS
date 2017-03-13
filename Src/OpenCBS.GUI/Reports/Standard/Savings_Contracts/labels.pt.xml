@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<label>
+  <MAIN_REPORT>
+    <fn_footer>"Ativos contratos de poupança para "+ CStr({?pDate}, "dd.MM.yyyy")+" • "+
+{?USER_NAME} + " • " + {?BRANCH_NAME}</fn_footer>
+    <Text16>contratos de poupança</Text16>
+    <Text3>Tipo de produto:</Text3>
+    <Text2>Código dos Contratos</Text2>
+    <Text4>Nome do produto:</Text4>
+    <Text5>nome do cliente</Text5>
+    <Text6>Código do produto:</Text6>
+    <Text7>data de criação</Text7>
+    <Text8>Saldo</Text8>
+    <Text9>Taxa de juros,%</Text9>
+    <Text10>Subtotal por</Text10>
+    <Text14>de</Text14>
+    <Text11>Subtotal por</Text11>
+    <Text17>de todas as poupanças</Text17>
+    <Text12>Grand total:</Text12>
+  </MAIN_REPORT>
+</label>
